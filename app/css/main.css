@@ -1048,9 +1048,10 @@ button {
 .bl_language__variables,
 .bl_currency__variables {
   position: absolute;
-  top: 120%;
+  top: 110%;
   left: 0;
   width: 50px;
+  min-width: inherit;
   min-height: 30px;
   background-color: #392b24;
   z-index: 10; }
@@ -1201,15 +1202,47 @@ button {
   margin-top: 6px;
   color: #333; }
 
-.bl_personalRoom {
-  float: right;
-  width: 100px;
-  margin-top: 22px;
-  margin-right: 5%; }
-
 .bl_personalRoom__link {
-  text-align: center;
-  width: 100%; }
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 12%;
+  color: #fff;
+  line-height: 2; }
+  .bl_personalRoom__link:hover {
+    color: inherit;
+    text-decoration: underline; }
+
+.bl_personalRoom__icon:before {
+  position: absolute;
+  top: 17%;
+  left: -20px;
+  content: "";
+  width: 13px;
+  height: 16px;
+  background: url("../image/icon_account.svg") 50% 50% no-repeat; }
+
+.btn_callBack {
+  float: right;
+  display: inline-block;
+  margin-right: 12%;
+  background: inherit; }
+
+.btn_callBack__text {
+  position: relative;
+  font-size: 14px;
+  color: #fff; }
+  .btn_callBack__text:hover {
+    text-decoration: underline; }
+
+.btn_icon__callBack:before {
+  content: "";
+  position: absolute;
+  top: 17%;
+  left: -20px;
+  width: 16px;
+  height: 16px;
+  background: url("../image/icone_phone.svg") 50% 50% no-repeat; }
 
 .bl_fullCategories {
   width: 100%;
