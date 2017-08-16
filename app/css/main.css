@@ -982,7 +982,7 @@ button {
   width: 200px;
   min-height: 300px;
   transition: left 0.3s;
-  background-color: #0160ac;
+  background-color: #392b24;
   z-index: 10; }
   .bl_fullNavigation_mobile .bl_nav:before {
     position: absolute;
@@ -1261,21 +1261,16 @@ button {
   background-color: #548301; }
 
 .bl_fullCategories__field {
-  text-align: justify; }
-  .bl_fullCategories__field:after {
-    content: "";
-    display: inline-block;
-    width: 100%; }
+  width: 100%; }
 
 .bl_fullCategories__item {
   display: inline-block;
   height: 100%;
   width: calc((100% / 7) - 6px);
-  vertical-align: middle;
   text-align: center; }
   .bl_fullCategories__item:first-child {
     text-align: left; }
-  .bl_fullCategories__item:last-child {
+  .bl_fullCategories__item:last-child .bl_fullCategories__link {
     text-align: right;
     border-right: none; }
 
@@ -1287,7 +1282,7 @@ button {
   font-size: 18px;
   line-height: 2;
   box-sizing: border-box;
-  border-right: 1px solid red; }
+  border-right: 1px solid #fff; }
   .bl_fullCategories__link:hover, .bl_fullCategories__link:focus {
     color: white;
     text-decoration: underline; }
@@ -3328,7 +3323,7 @@ li.inf_product__item {
 .footer_secondPart {
   width: 100%;
   min-height: 50px;
-  background-color: #191a1d; }
+  background-color: #548301; }
   .footer_secondPart__description {
     width: 100%;
     display: inline-block;
@@ -3348,7 +3343,8 @@ li.inf_product__item {
   font-size: 16px; }
 
 .footer_fullPages {
-  margin-top: 33px; }
+  margin-top: 33px;
+  margin-bottom: 36px; }
   .footer_fullPages__item {
     width: 100%;
     line-height: 30px; }
@@ -3371,9 +3367,22 @@ li.inf_product__item {
   margin-top: 10px;
   color: #fff;
   font-size: 16px; }
+  .footer_fullPages__adress:hover, .footer_fullPages__adress:focus {
+    color: #fff; }
 
-.footer_fullPages__lunch {
-  margin-top: 20px; }
+.footer_fullPages__map {
+  position: relative;
+  text-decoration: underline;
+  padding-left: 45px; }
+
+.icon-map:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  top: -25%;
+  background: url("../../image/map.svg") 50% 50% no-repeat; }
 
 .bl_ancor {
   position: fixed;

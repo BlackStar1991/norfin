@@ -7,7 +7,7 @@
 .footer_secondPart{
   width: 100%;
   min-height: 50px;
-  background-color: #191a1d;
+  background-color: $color_green;
 
   &__description{
     width: 100%;
@@ -36,6 +36,8 @@
 
 .footer_fullPages{
   margin-top: 33px;
+
+  margin-bottom: 36px;
 
   &__item{
     width: 100%;
@@ -73,12 +75,31 @@
   color: #fff;
   font-size: 16px;
 
+  
+  &:hover,
+  &:focus{
+    color: #fff;
+  }
 }
 
-.footer_fullPages__lunch{
-  margin-top: 20px;
+.footer_fullPages__map{
+  position: relative;
+  text-decoration: underline;
+  padding-left: 45px;
 }
 
+.icon-map{
+  &:before{
+   content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: -25%;
+
+    background: url("../../image/map.svg") 50% 50% no-repeat;
+  }
+}
 
 .bl_ancor{
 
