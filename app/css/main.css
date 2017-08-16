@@ -1113,7 +1113,7 @@ button {
 .bl_fullControlsMenu {
   width: 100%;
   background-color: #fff;
-  padding-bottom: 16px; }
+  padding-bottom: 30px; }
 
 .bl_logo__link {
   display: block;
@@ -1122,29 +1122,11 @@ button {
 .bl_logo__image {
   display: block; }
 
-.bl_phonesSearch {
-  width: 100%;
-  margin-right: 10%;
-  max-width: 330px;
-  float: right;
-  margin-top: 30px; }
-
-.bl_phones {
-  width: 100%; }
-
-.bl_phones__left {
-  float: left; }
-
-.bl_phones__right {
-  float: right; }
-
-.bl_phones__text {
-  color: #333; }
-
 .bl_search {
   position: relative;
+  margin-top: 13%;
   width: 100%;
-  top: 4px; }
+  max-width: 400px; }
 
 .bl_search__field {
   width: 100%;
@@ -1152,7 +1134,7 @@ button {
   box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   text-indent: 15px; }
   .bl_search__field::-webkit-input-placeholder {
@@ -1178,11 +1160,41 @@ button {
 
 .bl_search__button {
   position: absolute;
-  top: 34px;
+  top: 10%;
   right: 16px;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   width: 16px;
   height: 16px;
-  background: url("../image/search.svg") 50% 50% no-repeat; }
+  background: url("../../image/loupe.svg") 50% 50% no-repeat; }
+
+.bl_phones {
+  float: right;
+  margin-right: 15%;
+  margin-top: 22px;
+  text-align: right; }
+
+.bl_phones__text {
+  position: relative; }
+
+.icon_calling:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 12px;
+  background: url("../../image/icon_calling.svg") 50% 50% no-repeat; }
+
+.bl_phones__fullSize {
+  margin-top: 17px; }
+
+.bl_phones__number {
+  margin-top: 2px;
+  margin-bottom: 0; }
+  .bl_phones__number:first-child {
+    margin-top: 0; }
 
 .bl_shoppingCart {
   float: right;
@@ -1246,8 +1258,7 @@ button {
 
 .bl_fullCategories {
   width: 100%;
-  min-height: 50px;
-  background-color: #0160ac; }
+  background-color: #548301; }
 
 .bl_fullCategories__field {
   text-align: justify; }
@@ -1258,18 +1269,25 @@ button {
 
 .bl_fullCategories__item {
   display: inline-block;
-  max-height: 50px;
-  vertical-align: middle; }
+  height: 100%;
+  width: calc((100% / 7) - 6px);
+  vertical-align: middle;
+  text-align: center; }
+  .bl_fullCategories__item:first-child {
+    text-align: left; }
+  .bl_fullCategories__item:last-child {
+    text-align: right;
+    border-right: none; }
 
 .bl_fullCategories__link {
   display: block;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
+  height: 100%;
   width: 100%;
   color: white;
   font-size: 18px;
-  font-weight: 400; }
+  line-height: 2;
+  box-sizing: border-box;
+  border-right: 1px solid red; }
   .bl_fullCategories__link:hover, .bl_fullCategories__link:focus {
     color: white;
     text-decoration: underline; }
@@ -3305,7 +3323,7 @@ li.inf_product__item {
 .footer_firstPart {
   margin-top: 36px;
   width: 100%;
-  background-color: #fff; }
+  background-color: #392b24; }
 
 .footer_secondPart {
   width: 100%;
@@ -3325,7 +3343,7 @@ li.inf_product__item {
 .footer_title {
   margin-top: 26px;
   margin-bottom: 0;
-  color: #333;
+  color: #fff;
   font-family: "TahomaBold", sans-serif;
   font-size: 16px; }
 
@@ -3338,58 +3356,24 @@ li.inf_product__item {
     display: block;
     width: 100%;
     height: 100%;
-    color: #333; }
-    .footer_fullPages__link:hover {
+    color: #fff; }
+    .footer_fullPages__link:hover, .footer_fullPages__link:focus {
+      color: #fff;
       text-decoration: underline; }
 
 .footer_fullPages__contacts {
-  color: #333;
+  color: #fff;
   font-family: "TahomaBold", sans-serif;
   font-size: 16px;
   line-height: 32px; }
 
-.footer_fullPages__workTime {
-  margin-top: 36px; }
-
-.footer_fullPages__paragraph {
-  margin-bottom: 10px;
-  color: #333;
-  font-family: "Tahoma", sans-serif;
-  font-size: 16px;
-  font-weight: 400; }
-
 .footer_fullPages__adress {
   margin-top: 10px;
-  color: #333;
+  color: #fff;
   font-size: 16px; }
 
 .footer_fullPages__lunch {
   margin-top: 20px; }
-
-.footer_fullPages__fullSocButtons {
-  width: 100%;
-  margin-top: 32px; }
-
-.bl_socButton {
-  float: left;
-  margin-right: 28px;
-  width: 51px;
-  height: 51px; }
-  .bl_socButton__facebook {
-    background-image: url(../image/sprite.png);
-    background-position: 0px -119px;
-    width: 50px;
-    height: 50px; }
-  .bl_socButton__google {
-    background-image: url(../image/sprite.png);
-    background-position: -55px -119px;
-    width: 50px;
-    height: 50px; }
-  .bl_socButton__youtube {
-    background-image: url(../image/sprite.png);
-    background-position: -110px -119px;
-    width: 50px;
-    height: 50px; }
 
 .bl_ancor {
   position: fixed;

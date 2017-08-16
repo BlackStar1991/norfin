@@ -1,7 +1,7 @@
 .footer_firstPart{
   margin-top: 36px;
   width: 100%;
-  background-color: #fff;
+  background-color: $color_brown;
 }
 
 .footer_secondPart{
@@ -17,6 +17,7 @@
     font-weight: 400;
     line-height: 3.7;
 
+
     &:hover{
       color: #fff;
       text-decoration: underline;
@@ -28,7 +29,7 @@
 .footer_title{
   margin-top: 26px;
   margin-bottom: 0;
-  color: $color_grey2;
+  color: #fff;
   font-family: $TahomaBold;
   font-size: 16px;
 }
@@ -45,9 +46,11 @@
     display: block;
     width: 100%;
     height: 100%;
-    color: $color_grey2;
+    color: #fff;
 
-    &:hover{
+    &:hover,
+    &:focus{
+      color: #fff;
       text-decoration: underline;
     }
 
@@ -55,55 +58,25 @@
 }
 
 .footer_fullPages__contacts{
-  color: $color_grey2;
+  color: #fff;
   font-family: $TahomaBold;
   font-size: 16px;
   line-height: 32px;
 }
 
-.footer_fullPages__workTime{
-  margin-top: 36px;
-}
 
-.footer_fullPages__paragraph{
-  margin-bottom: 10px;
-  color: $color_grey2;
-  font-family: $Tahoma;
-  font-size: 16px;
-  font-weight: 400;
-}
+
+
 
 .footer_fullPages__adress{
   margin-top: 10px;
-  color: $color_grey2;
+  color: #fff;
   font-size: 16px;
 
 }
 
 .footer_fullPages__lunch{
   margin-top: 20px;
-}
-
-.footer_fullPages__fullSocButtons{
-  width: 100%;
-  margin-top: 32px;
-}
-
-.bl_socButton{
-  float: left;
-  margin-right: 28px; ///////////
-  width: 51px;
-  height: 51px;
-
-  &__facebook{
-    @include sprite($fb);
-  }
-  &__google{
-    @include sprite($google);
-  }
-  &__youtube{
-    @include sprite($youtube);
-  }
 }
 
 

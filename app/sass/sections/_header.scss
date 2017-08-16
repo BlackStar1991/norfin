@@ -219,11 +219,16 @@
 
 
 
+
+
+
+
+
 .bl_fullControlsMenu {
   width: 100%;
   background-color: #fff;
 
-  padding-bottom: 16px; ////////////
+  padding-bottom: 30px; ////////////
 }
 
 $marginTopItem: 30px;
@@ -238,34 +243,14 @@ $marginTopItem: 30px;
 
 }
 
-.bl_phonesSearch {
-  width: 100%;
-  margin-right: 10%;
-  max-width: 330px;
-  float: right;
-  margin-top: $marginTopItem; ////////
-}
 
-.bl_phones {
-  width: 100%;
-}
-
-.bl_phones__left {
-  float: left;
-}
-
-.bl_phones__right {
-  float: right;
-}
-
-.bl_phones__text {
-  color: $color_grey2;
-}
 
 .bl_search {
   position: relative;
+  margin-top: 13%;
   width: 100%;
-  top: 4px;
+  max-width: 400px;
+
 }
 
 .bl_search__field {
@@ -275,7 +260,7 @@ $marginTopItem: 30px;
   box-sizing: border-box;
   background-color: #fff;
   border: 1px solid $color_grey3;
-  border-radius: 20px;
+  border-radius: 5px;
   outline: none;
   text-indent: 15px;
 
@@ -298,80 +283,63 @@ $marginTopItem: 30px;
 
 .bl_search__button {
   position: absolute;
-  top: 34px;
+  top: 10%;
   right: 16px;
 
+  transform: translateY(50%);
   width: 16px;
   height: 16px;
 
-  background: url("../image/search.svg") 50% 50% no-repeat;
+  background: url("../../image/loupe.svg") 50% 50% no-repeat;
+}
+
+
+$marginTopItem2: 22px;
+
+
+.bl_phones{
+  float: right;
+
+  margin-right: 15%;
+
+  margin-top: $marginTopItem2; ////////////
+  text-align: right;
+}
+
+.bl_phones__text{
+  position: relative;
+}
+
+.icon_calling{
+  &:before{
+    content: "";
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 3px;
+    left: 12px;
+
+    background: url("../../image/icon_calling.svg") 50% 50% no-repeat;
+  }
+}
+
+.bl_phones__fullSize{
+  margin-top: 17px;
+}
+
+.bl_phones__number{
+  margin-top: 2px;
+  margin-bottom: 0;
+
+  &:first-child{
+    margin-top: 0;
+  }
 }
 
 
 
-
-//
-//.bl_currency__input {
-//  position: absolute;
-//  visibility: hidden;
-//  right: 42px;
-//  z-index: 2;
-//}
-//
-//.bl_currency__label {
-//  clear: both;
-//  display: block;
-//  float: right;
-//  cursor: pointer;
-//
-//  &:nth-of-type(2) {
-//    margin-top: 10px; ////////////
-//  }
-//}
-//
-//.bl_currency__text {
-//  position: relative;
-//  display: block;
-//  width: 30px;
-//  text-transform: uppercase;
-//  font-weight: 400;
-//}
-//
-//.bl_currency__decorCircle {
-//  &:before {
-//    position: absolute;
-//    left: -27px;
-//    top: 2px;
-//    content: '';
-//    width: 16px;
-//    height: 16px;
-//    border-radius: 50%;
-//    box-sizing: border-box;
-//    border: 1px solid $color_grey3;
-//    z-index: 3;
-//  }
-//}
-//
-//.bl_currency__input:checked + .bl_currency__label .bl_currency__decorCircle:after {
-//  position: absolute;
-//  left: -24px;
-//  top: 5px;
-//  content: '';
-//  width: 10px;
-//  height: 10px;
-//  background-color: $color_grey3;
-//  border: 1px solid $color_grey3;
-//  border-radius: 50%;
-//  box-sizing: border-box;
-//  z-index: 4;
-//}
-
-
-
-
-$marginTopItem2: 22px;
 .bl_shoppingCart {
-  //min-width:80px;
   float: right;
   margin-top: $marginTopItem2; ////////////
 }
@@ -462,9 +430,9 @@ $marginTopItem2: 22px;
 
 .bl_fullCategories {
   width: 100%;
-  min-height: 50px;
+  //min-height: 50px;
 
-  background-color: $color_blue;
+  background-color: $color_green;
 }
 
 .bl_fullCategories__field {
@@ -481,19 +449,37 @@ $marginTopItem2: 22px;
 
 .bl_fullCategories__item {
   display: inline-block;
-  max-height: 50px;
+  //max-height: 50px;
+  height: 100%;
+  width: calc((100% / 7) - 6px);
+ 
   vertical-align: middle;
+  text-align: center;
+  
+  &:first-child{
+    text-align: left;
+  }
+  
+  &:last-child{
+    text-align: right;
+    border-right: none;
+  }
 }
 
 .bl_fullCategories__link {
   display: block;
-  transform: translateY(50%);
-
+  height: 100%;
   width: 100%;
   color: white;
   font-size: 18px;
-  font-weight: 400;
 
+  line-height: 2;
+
+
+  box-sizing: border-box;
+  border-right: 1px solid red;
+  
+  
   &:hover,
   &:focus {
     color: white;
