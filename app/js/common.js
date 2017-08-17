@@ -70,6 +70,31 @@ $(document).ready(function () {
 
 
 
+
+/// buttons must work only  $(window).width() <=991px
+    function liveScopeOfButtons() {
+
+        if ($(window).width() <= 991) {
+
+            sliderEffectForButtons(buttonRubrics, fieldRubrics, 600);
+            sliderEffectForButtons(buttonCategories, fieldCategories, 600);
+            sliderEffectForButtons(buttonInformation, fieldInformation, 600);
+            sliderEffectForButtons(buttonContacts, fieldContacts, 600);
+            sliderEffectForButtons(buttonAdress, fieldAdress, 600);
+            sliderEffectForButtons(buttonFilterCategories, fieldFilterCategories, 600);
+            sliderEffectForButtons(buttonAllFilters, fieldAllFilters , 600);
+
+        } else {
+            return false;
+        }
+
+    }
+
+    liveScopeOfButtons();
+
+
+
+
     //// Main-slider
 
     $(".bl_mainSlider").owlCarousel({

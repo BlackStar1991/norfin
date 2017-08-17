@@ -6,43 +6,42 @@
   color: #fff;
 }
 
+.bl_nav {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
 
+.bl_nav__fullItems {
 
-  .bl_nav {
-    position: relative;
-    height: 100%;
-    width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.bl_nav__item {
+  float: left;
+
+  height: 100%;
+  line-height: 2;
+  text-align: center;
+  margin-right: 3.5%; ////////// 30px
+
+}
+
+.bl_nav__link {
+
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+
+  &:hover,
+  &:active,
+  &:focus{
+    color: #fff;
+    text-decoration: underline;
   }
-  .bl_nav__fullItems {
-
-    width: 100%;
-    height: 100%;
-  }
-
-  .bl_nav__item {
-    float: left;
-
-    height: 100%;
-    line-height: 2;
-    text-align: center;
-    margin-right: 3.5%; ////////// 30px
-
-  }
-
-  .bl_nav__link {
-
-    display: block;
-    width: 100%;
-    color: white;
-    font-size: 14px;
-
-    &:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-  }
-
-
+}
 
 // Mobile
 .bl_fullNavigation_mobile .bl_nav {
@@ -99,22 +98,6 @@
   font-size: 14px;
 }
 
-
-.bl_fullNavigation_mobile .bl_control {
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-
-  .bl_itemPrice{
-    float: none;
-  }
-
-  .bl_language {
-    position: absolute;
-    right: 10px;
-  }
-}
-
 .bl_language {
   position: relative;
 
@@ -140,7 +123,7 @@
 }
 
 .bl_language__variables,
-.bl_currency__variables{
+.bl_currency__variables {
 
   position: absolute;
   top: 110%;
@@ -152,13 +135,13 @@
 
   z-index: 10;
 }
-.bl_currency__variables{
+
+.bl_currency__variables {
   left: -100%;
 }
 
-
 .bl_language__variables_item,
-.bl_currency__variables_item{
+.bl_currency__variables_item {
   position: relative;
   margin-left: 5px;
   padding: 2px 0;
@@ -169,15 +152,15 @@
   }
 
 }
-.bl_currency__variables_item{
+
+.bl_currency__variables_item {
   text-align: right;
   margin-left: 0;
   margin-right: 5px;
 }
 
-
 .bl_language__variables_item:hover:after,
-.bl_currency__variables_item:hover:before{
+.bl_currency__variables_item:hover:before {
 
   position: absolute;
   top: 35%;
@@ -189,12 +172,12 @@
   background: url("../../image/arrow_down.svg") 50% 50% no-repeat;
   z-index: 12;
 }
-.bl_currency__variables_item:hover:before{
+
+.bl_currency__variables_item:hover:before {
 
   transform: rotate(-90deg);
   left: 10%;
 }
-
 
 .bl_currency {
   position: relative;
@@ -202,9 +185,10 @@
   margin-right: 8%;
 
   cursor: pointer;
+  z-index: 3;
 }
 
-.bl_currency__active{
+.bl_currency__active {
 
   &:before {
     position: absolute;
@@ -216,13 +200,6 @@
     background: url("../../image/arrow_down.svg") 50% 50% no-repeat;
   }
 }
-
-
-
-
-
-
-
 
 .bl_fullControlsMenu {
   width: 100%;
@@ -242,8 +219,6 @@ $marginTopItem: 30px;
   display: block;
 
 }
-
-
 
 .bl_search {
   position: relative;
@@ -272,7 +247,7 @@ $marginTopItem: 30px;
 
   }
   &:focus {
-    border-color: $color_blue;
+    border-color: $color_green;
   }
 
   &:focus::placeholder {
@@ -293,11 +268,9 @@ $marginTopItem: 30px;
   background: url("../../image/loupe.svg") 50% 50% no-repeat;
 }
 
-
 $marginTopItem2: 22px;
 
-
-.bl_phones{
+.bl_phones {
   float: right;
 
   margin-right: 15%;
@@ -306,12 +279,12 @@ $marginTopItem2: 22px;
   text-align: right;
 }
 
-.bl_phones__text{
+.bl_phones__text {
   position: relative;
 }
 
-.icon_calling{
-  &:before{
+.icon_calling {
+  &:before {
     content: "";
     width: 16px;
     height: 16px;
@@ -324,20 +297,18 @@ $marginTopItem2: 22px;
   }
 }
 
-.bl_phones__fullSize{
+.bl_phones__fullSize {
   margin-top: 17px;
 }
 
-.bl_phones__number{
+.bl_phones__number {
   margin-top: 2px;
   margin-bottom: 0;
 
-  &:first-child{
+  &:first-child {
     margin-top: 0;
   }
 }
-
-
 
 .bl_shoppingCart {
   float: right;
@@ -361,8 +332,6 @@ $marginTopItem2: 22px;
   color: $color_grey2;
 }
 
-
-
 .bl_personalRoom__link {
   position: relative;
   display: inline-block;
@@ -372,14 +341,16 @@ $marginTopItem2: 22px;
 
   line-height: 2;
 
-  &:hover{
-    color: inherit;
+  &:hover,
+  &:focus,
+  &:active{
+    color: #fff;
     text-decoration: underline;
   }
 }
 
 .bl_personalRoom__icon {
-  &:before{
+  &:before {
     position: absolute;
     top: 17%;
     left: -20px;
@@ -391,8 +362,7 @@ $marginTopItem2: 22px;
 
 }
 
-
-.btn_callBack{
+.btn_callBack {
   float: right;
   display: inline-block;
   margin-right: 12%;
@@ -400,19 +370,19 @@ $marginTopItem2: 22px;
 
 }
 
-.btn_callBack__text{
+.btn_callBack__text {
   position: relative;
 
   font-size: 14px;
   color: #fff;
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 }
 
-.btn_icon__callBack{
+.btn_icon__callBack {
 
-  &:before{
+  &:before {
     content: "";
     position: absolute;
     top: 17%;
@@ -423,29 +393,13 @@ $marginTopItem2: 22px;
   }
 }
 
-
-
-
-
-
 .bl_fullCategories {
   width: 100%;
-  //min-height: 50px;
-
   background-color: $color_green;
 }
 
 .bl_fullCategories__field {
   width: 100%;
-
-  //text-align: justify;
-  //
-  //&:after {
-  //  content: "";
-  //  display: inline-block;
-  //  width: 100%;
-  //}
-
 }
 
 .bl_fullCategories__item {
@@ -453,11 +407,11 @@ $marginTopItem2: 22px;
   height: 100%;
   width: calc((100% / 7) - 6px);
   text-align: center;
-  
-  &:first-child{
+
+  &:first-child {
     text-align: left;
   }
-  &:last-child .bl_fullCategories__link{
+  &:last-child .bl_fullCategories__link {
     text-align: right;
     border-right: none;
   }
@@ -473,14 +427,9 @@ $marginTopItem2: 22px;
 
   line-height: 2;
 
-
   box-sizing: border-box;
   border-right: 1px solid #fff;
 
-
-
-
-  
   &:hover,
   &:focus {
     color: white;
@@ -551,7 +500,7 @@ $marginTopItem2: 22px;
 
 .open-menu-main {
   display: block;
-  margin: 10px auto 0;
+  margin: 10px auto;
   height: 30px;
   width: 150px;
   align-items: center;
