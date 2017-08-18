@@ -138,7 +138,9 @@
 }
 
 
-.icon-snomflake:before{
+.icon-snomflake:before,
+.icon-snomflake__midle:before,
+.icon-snomflake__small:before{
   content: "";
   display: block;
   position: absolute;
@@ -149,5 +151,19 @@
   height: 72px;
 
   background: url("../../image/snowflake.svg") 50% 50% no-repeat;
+
+}
+
+.icon-snomflake__midle:before{
+  width: 56px;
+  height: 52px;
+
+  left: -26px;
+  top: -5px;
+
+  background-size: cover;
+}
+
+.icon-snomflake__small:before{
 
 }

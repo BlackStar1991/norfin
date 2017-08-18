@@ -167,15 +167,8 @@ button {
   font-size: 18px;
 }
 
-
-
-
-$minSliderHeight: 555px; /// 578
-
 .mainSlider__fullBlock {
   width: 100%;
-  min-height: $minSliderHeight;
-  background-color: #fff;
 }
 
 .bl_mainSlider {
@@ -315,25 +308,18 @@ $minSliderHeight: 555px; /// 578
     background-color: #fff;
     box-sizing: border-box;
     border: 1px solid $color_lightGrey;
-    &:before {
-      width: 16px;
-      height: 30px;
-      background: url("../image/arrow_left_bloсk.svg") 50% 50% no-repeat;
-    }
   }
 
   .owl-next {
     float: right;
-    &:before {
-      background: url("../image/arrow_right_bloсk.svg") 50% 50% no-repeat;
-    }
+
   }
 
 }
 
 .arrow-prev__hover {
-  background-color: $color_blue !important;
-  border-color: $color_blue !important;
+  background-color: $color_green !important;
+  border-color: $color_lightGrey !important;
 }
 
 .product_image__slider.owl-carousel .owl-nav {
@@ -350,7 +336,7 @@ $minSliderHeight: 555px; /// 578
     width: 30px;
     height: 50px;
 
-    background-color: $color_blue;
+    background-color: $color_green;
     box-sizing: border-box;
 
     z-index: 11;
@@ -402,6 +388,7 @@ $minSliderHeight: 555px; /// 578
 
 
 .bl_dayProduct__actual_text{
+  position: relative;
   text-align: center;
   margin:auto;
   max-width: 250px;
@@ -423,6 +410,7 @@ $minSliderHeight: 555px; /// 578
 }
 
 .bl_dayProduct__title{
+  position: relative;
   margin-top: 30px;
   height: 40px;
   color: #333;
@@ -432,9 +420,57 @@ $minSliderHeight: 555px; /// 578
 
 }
 
+.bl_dayProduct__link{
+  display: block;
+  width: 100%;
+  height: 100%;
 
+  &:hover{
+    text-decoration: underline;
+  }
+}
 
+.bl_dayProduct__minBlock{
+  width: 100%;
+  height: 100%;
+  min-height:275px;
+  border-left: 1px solid $color_lightGrey;
+  text-align: center;
 
+  border: 1px solid red;
+}
+
+.bl_dayProduct__minBlocks_text{
+  margin-top: 30px;
+  text-align: center;
+  color: #333;
+  font-family: $Tahoma;
+  font-size: 18px;
+}
+
+.bl_sale{
+  position: relative;
+  margin: 17px auto 0;
+
+  width: 100px;
+  height: 35px;
+  background-color: $color_brown;
+}
+
+.bl_sale__text{
+  text-align: center;
+  color: #fff;
+  font-family: "Arial Narrow";
+  font-size: 18px;
+  line-height: 2;
+}
+
+.bl_dayProduct__minImage{
+  display: block;
+  margin: 16px auto 0;
+  width: 100%;
+  max-width: 150px;
+}
 
 
 
@@ -499,23 +535,25 @@ $minSliderHeight: 555px; /// 578
 
 .bl_mark {
   position: absolute;
-  top: -24px;
-  left: -18px;
+  width: 56px;
+  height: 52px;
 
-  width: 113px;
-  height: 126px;
+  left: -26px;
+  top: -5px;
+
+  background-size: cover;
 
   &__hit {
-    background: url("../image/fish_hit.svg") 0 50% no-repeat;
+    background: url("../image/snowflake.svg") 0 50% no-repeat;
   }
 
-  &__action {
-    background: url("../image/fish_action.svg") 0 50% no-repeat;
-  }
-
-  &__new {
-    background: url("../image/fish_new.svg") 0 50% no-repeat;
-  }
+  //&__action {
+  //  background: url("../image/fish_action.svg") 0 50% no-repeat;
+  //}
+  //
+  //&__new {
+  //  background: url("../image/fish_new.svg") 0 50% no-repeat;
+  //}
 
 }
 
@@ -526,6 +564,8 @@ $minSliderHeight: 555px; /// 578
   transform: translate(-50%, -25%);
 
   color: #fff;
+  background-color: $color_brown;
+
   font-family: "Arial Narrow", Arial, sans-serif;
 
   font-size: 24px;

@@ -157,66 +157,330 @@
 <main class="main">
     <div class="mainWrapper">
         <div class="container">
-           
-                <div class="mainSlider__fullBlock">
-                    <ul class="bl_mainSlider owl-carousel">
-                        <li class="bl_mainSlider__item">
-                            <img class="bl_mainSlider__image" src="image/mainSlider/banner1.jpg" alt="">
 
-                            <a class="bl_mainSlider__details" href="#"><span
-                                    class="bl_mainSlider__details_text">Подробнее >></span></a>
-                        </li>
-                        <li class="bl_mainSlider__item">
-                            <img class="bl_mainSlider__image" src="image/mainSlider/banner1.jpg" alt="">
-                           
-                            <a class="bl_mainSlider__details" href="#"><span
-                                    class="bl_mainSlider__details_text">Подробнее >></span></a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="mainSlider__fullBlock">
+                <ul class="bl_mainSlider owl-carousel">
+                    <li class="bl_mainSlider__item">
+                        <img class="bl_mainSlider__image" src="image/mainSlider/banner1.jpg" alt="">
 
-            <div class="bl_dayProduct">
-                <div class="col-xs-6 correct_left">
+                        <a class="bl_mainSlider__details" href="#"><span
+                                class="bl_mainSlider__details_text">Подробнее >></span></a>
+                    </li>
+                    <li class="bl_mainSlider__item">
+                        <img class="bl_mainSlider__image" src="image/mainSlider/banner1.jpg" alt="">
+
+                        <a class="bl_mainSlider__details" href="#"><span
+                                class="bl_mainSlider__details_text">Подробнее >></span></a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- dayProduct-->
+
+            <div class="bl_dayProduct clearfix">
+                <div class="col-md-6 correct_left">
                     <h2 class="title_name bl_popular__title">Товар дня</h2>
 
                     <div class="bl_dayProduct__actual">
                         <div class="bl_wrapper">
-                            <p class="bl_dayProduct__actual_text">товар дня</p>
+                            <p class="bl_dayProduct__actual_text icon-snomflake__midle">товар дня</p>
                             <img class="bl_dayProduct__actual_img" src="image/Products/product_day.jpg" alt="">
                         </div>
 
                         <h3 class="bl_dayProduct__title">
-                            Рюкзак тактический Norfin TACTIC 45 45л / NF
+                            <a class="bl_dayProduct__link" href="#">Рюкзак тактический Norfin TACTIC 45 45л / NF</a>
                         </h3>
-                        <div class="product_sliderCart__price">
+                        <div class="product_sliderCart__price clearfix">
                             <p class="product_sliderCart__price_oldPrice">2034 грн.</p>
                             <p class="product_sliderCart__price_newPrice">100 грн.</p>
                         </div>
                         <button class="product_sliderCart__buy">
                             <span class="product_sliderCart__buy_text"> Купить</span>
                         </button>
-
-
                     </div>
-
-                    
-
                 </div>
-                <div class="col-xs-3">
+
+                <div class="col-xs-6 col-md-3">
                     <div class="bl_dayProduct__minBlocks">
                         <div class="bl_wrapper">
-                            <p class="bl_dayProduct__minBlocks_text">товар дня</p>
-                            <img src="image/Products/product_day_small.jpg" alt="">
+                            <h3 class="bl_dayProduct__minBlocks_text"><a class="bl_dayProduct__link"
+                                                                         href="#">Экипировка</a></h3>
+                            <div class="bl_sale icon-snomflake__midle">
+                                <p class="bl_sale__text">до -25%</p>
+                            </div>
+                            <img class="bl_dayProduct__minImage" src="image/Products/product_day_small.jpg" alt="">
                         </div>
                     </div>
-
+                    <div class="bl_dayProduct__minBlocks">
+                        <div class="bl_wrapper">
+                            <h3 class="bl_dayProduct__minBlocks_text"><a class="bl_dayProduct__link"
+                                                                         href="#">Экипировка</a></h3>
+                            <div class="bl_sale icon-snomflake__midle">
+                                <p class="bl_sale__text">до -25%</p>
+                            </div>
+                            <img class="bl_dayProduct__minImage" src="image/Products/product_day_small.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-3">
-                    
+                <div class="col-xs-6 col-md-3">
+                    <div class="bl_dayProduct__minBlocks">
+                        <div class="bl_wrapper">
+                            <h3 class="bl_dayProduct__minBlocks_text"><a class="bl_dayProduct__link"
+                                                                         href="#">Экипировка</a></h3>
+                            <div class="bl_sale icon-snomflake__midle">
+                                <p class="bl_sale__text">до -25%</p>
+                            </div>
+                            <img class="bl_dayProduct__minImage" src="image/Products/product_day_small.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="bl_dayProduct__minBlocks">
+                        <div class="bl_wrapper">
+                            <h3 class="bl_dayProduct__minBlocks_text"><a class="bl_dayProduct__link"
+                                                                         href="#">Экипировка</a></h3>
+                            <div class="bl_sale icon-snomflake__midle">
+                                <p class="bl_sale__text">до -25%</p>
+                            </div>
+                            <img class="bl_dayProduct__minImage" src="image/Products/product_day_small.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!-- Popular product -->
 
+            <div class="col-xs-12 correct_left correct_right">
+                <div class="bl_popular">
+                    <h2 class="title_name bl_popular__title">Акции</h2>
+
+                    <ul class="slider_popular owl-carousel">
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+
+                                <!-- Лейба Хит продаж, для всех страниц-->
+                                <div class="bl_mark bl_mark__hit">
+                                    <div class="wrapperBlock"><span class="bl_mark__text">хит</span></div>
+                                </div>
+                                <!-- -->
+
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <div class="bl_mark bl_mark__hit">
+                                    <div class="wrapperBlock"><span class="bl_mark__text">хит</span></div>
+                                </div>
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <div class="bl_mark bl_mark__hit">
+                                    <div class="wrapperBlock"><span class="bl_mark__text">хит</span></div>
+                                </div>
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <div class="bl_mark bl_mark__hit">
+                                    <div class="wrapperBlock"><span class="bl_mark__text">хит</span></div>
+                                </div>
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <div class="bl_mark bl_mark__hit">
+                                    <div class="wrapperBlock"><span class="bl_mark__text">хит</span></div>
+                                </div>
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- NEW Products-->
+
+                <div class="bl_newProducts">
+                    <h2 class="title_name bl_newProducts__title">Новинки</h2>
+
+                    <ul class="slider_newProducts owl-carousel">
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                        <li class="product_sliderCart__item">
+                            <div class="product_sliderCart__item_wrapper">
+                                <a href="#" class="product_sliderCart__link">
+                                    <img class="product_sliderCart__image" src="image/Products/product_1.jpg"
+                                         alt="">
+                                    <h2 class="product_sliderCart__name">
+                                        Рюкзак тактический Norfin TACTIC 45 45л / NF
+                                    </h2>
+                                </a>
+
+                                <div class="product_sliderCart__price clearfix">
+                                    <span class="product_sliderCart__price_oldPrice">2034 грн.</span>
+                                    <span class="product_sliderCart__price_newPrice">100 грн.</span>
+                                    <!--<span class="product_sliderCart__price_normalPrice">100 грн.</span>  ///Если акции нету -->
+                                </div>
+                                <button type="button" class="product_sliderCart__buy"><span
+                                        class="product_sliderCart__buy_text">Купить</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
 
 
 
