@@ -527,19 +527,22 @@ button {
   position: relative;
   max-width: 250px;
   text-align: center;
-  margin: 20px 18px 20px 22px;
+  margin: 12px 18px 20px 22px;
 }
 
 // MARK (layba)
 
 
 .bl_mark {
-  position: absolute;
-  width: 56px;
-  height: 52px;
-
-  left: -26px;
-  top: -5px;
+  position: relative;
+  width: 100px;
+  //height: 35px;
+  //position: absolute;
+  //width: 56px;
+  //height: 52px;
+  //
+  //left: -26px;
+  //top: -5px;
 
   background-size: cover;
 
@@ -559,8 +562,8 @@ button {
 
 .bl_mark__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 28%;
   transform: translate(-50%, -25%);
 
   color: #fff;
@@ -570,7 +573,8 @@ button {
 
   font-size: 24px;
   font-weight: 400;
-  line-height: 87px;
+
+  padding: 4px 22px 4px 39px;
   text-transform: uppercase;
 
   &_action {

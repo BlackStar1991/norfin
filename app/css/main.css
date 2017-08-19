@@ -1633,22 +1633,19 @@ button {
   position: relative;
   max-width: 250px;
   text-align: center;
-  margin: 20px 18px 20px 22px; }
+  margin: 12px 18px 20px 22px; }
 
 .bl_mark {
-  position: absolute;
-  width: 56px;
-  height: 52px;
-  left: -26px;
-  top: -5px;
+  position: relative;
+  width: 100px;
   background-size: cover; }
   .bl_mark__hit {
     background: url("../image/snowflake.svg") 0 50% no-repeat; }
 
 .bl_mark__text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 28%;
   -webkit-transform: translate(-50%, -25%);
       -ms-transform: translate(-50%, -25%);
           transform: translate(-50%, -25%);
@@ -1657,7 +1654,7 @@ button {
   font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
-  line-height: 87px;
+  padding: 4px 22px 4px 39px;
   text-transform: uppercase; }
   .bl_mark__text_action {
     font-size: 22px; }
