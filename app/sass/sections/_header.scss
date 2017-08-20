@@ -225,7 +225,7 @@ $marginTopItem: 30px;
   margin-top: 13%;
   width: 100%;
   max-width: 400px;
-
+  overflow: hidden;
 }
 
 .bl_search__field {
@@ -258,14 +258,31 @@ $marginTopItem: 30px;
 
 .bl_search__button {
   position: absolute;
-  top: 10%;
-  right: 16px;
+  top: 0;
+  right: 0;
 
-  transform: translateY(50%);
-  width: 16px;
-  height: 16px;
+  display: block;
 
-  background: url("../../image/loupe.svg") 50% 50% no-repeat;
+
+  background: none;
+  border: none;
+
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  z-index: 15;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: url("../../image/loupe.svg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+
 }
 
 $marginTopItem2: 22px;

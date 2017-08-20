@@ -884,9 +884,34 @@ body {
   height: 100%; }
 
 .main {
+  position: relative;
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+          flex: 1 0 auto;
+  overflow: hidden; }
+
+.decor_snowflake1 {
+  position: relative; }
+  .decor_snowflake1:before {
+    content: "";
+    position: absolute;
+    width: 836px;
+    height: 808px;
+    top: 446px;
+    left: 0;
+    background: url("../image/snowflake-1.png") 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1; }
+  .decor_snowflake1:after {
+    content: "";
+    position: absolute;
+    width: 676px;
+    height: 808px;
+    bottom: 19%;
+    right: -7%;
+    background: url("../image/snowflake-2.png") 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1; }
 
 .footer {
   -webkit-flex: 0 0 auto;
@@ -1107,7 +1132,8 @@ button {
   position: relative;
   margin-top: 13%;
   width: 100%;
-  max-width: 400px; }
+  max-width: 400px;
+  overflow: hidden; }
 
 .bl_search__field {
   width: 100%;
@@ -1141,14 +1167,24 @@ button {
 
 .bl_search__button {
   position: absolute;
-  top: 10%;
-  right: 16px;
-  -webkit-transform: translateY(50%);
-      -ms-transform: translateY(50%);
-          transform: translateY(50%);
-  width: 16px;
-  height: 16px;
-  background: url("../../image/loupe.svg") 50% 50% no-repeat; }
+  top: 0;
+  right: 0;
+  display: block;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  z-index: 15; }
+  .bl_search__button:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    background: url("../../image/loupe.svg") 50% 50% no-repeat;
+    background-size: cover; }
 
 .bl_phones {
   float: right;
@@ -1816,20 +1852,22 @@ button {
   text-transform: uppercase; }
 
 .bl_aboutShop {
-  background-color: #fff;
-  padding: 0 20px;
-  min-height: 400px;
-  margin-top: 30px;
-  width: 100%; }
+  width: 100%;
+  padding: 22px;
+  margin: 35px 0;
+  background-color: #fff; }
 
 .bl_aboutShop__title {
-  padding-top: 22px; }
-
-.bl_aboutShop__fullBlock {
-  width: 100%; }
+  margin: 0;
+  color: #333;
+  font-family: "TahomaBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px; }
 
 .bl_aboutShop__paragraph {
-  margin-top: 22px; }
+  margin-top: 10px;
+  color: #333;
+  line-height: 24px; }
 
 .bl_shopNews {
   margin-top: 36px;
@@ -3616,6 +3654,12 @@ li.inf_product__item {
 @media only screen and (max-width: 600px) {
   .btn_callBack {
     display: none; }
+  .bl_mainSlider__details {
+    width: 150px;
+    height: 30px;
+    bottom: 10px; }
+  .bl_mainSlider__details_text {
+    line-height: 1.8; }
   .bl_personalRoom__link {
     display: block;
     margin: 0 auto;

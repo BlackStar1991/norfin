@@ -73,8 +73,48 @@ body {
 }
 
 .main {
+  position: relative;
   flex: 1 0 auto;
+
+
+  overflow: hidden; ///////////////////////
 }
+
+.decor_snowflake1{
+  position: relative;
+
+  &:before{
+
+    content: "";
+    position: absolute;
+
+    width: 836px;
+    height: 808px;
+
+    top: 446px;
+    left: 0;
+    background: url("../image/snowflake-1.png") 50% 50% no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+
+    width: 676px;
+    height: 808px;
+
+    bottom: 19%;
+    right: -7%;
+    background: url("../image/snowflake-2.png") 50% 50% no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+}
+
 
 .footer {
   flex: 0 0 auto;
@@ -767,28 +807,61 @@ button {
 }
 
 //
-
-.bl_aboutShop {
-  background-color: #fff;
-  padding: 0 20px;
-  min-height: 400px;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.bl_aboutShop__title {
-  padding-top: 22px;
-}
-
-.bl_aboutShop__fullBlock {
-  width: 100%;
-}
-
-.bl_aboutShop__paragraph {
-  margin-top: 22px;
-}
+//
+//.bl_aboutShop {
+//  background-color: #fff;
+//  padding: 0 20px;
+//  min-height: 400px;
+//  margin-top: 30px;
+//  width: 100%;
+//}
+//
+//.bl_aboutShop__title {
+//  padding-top: 22px;
+//}
+//
+//.bl_aboutShop__fullBlock {
+//  width: 100%;
+//}
+//
+//.bl_aboutShop__paragraph {
+//  margin-top: 22px;
+//}
 
 //
+
+
+.bl_aboutShop{
+  width: 100%;
+  padding: 22px;
+  margin: 35px 0;
+  background-color: #fff;
+}
+
+.bl_aboutShop__title{
+  margin: 0;
+  color: #333;
+  font-family: $TahomaBold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.bl_aboutShop__paragraph{
+  margin-top: 10px;
+  color: #333;
+  line-height: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .bl_shopNews {
   margin-top: 36px;
