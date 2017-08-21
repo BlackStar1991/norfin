@@ -513,49 +513,93 @@ $(document).ready(function () {
 //  Если пользователю удалось отправить номер своего мобильного продавцу должна отрабатывать эта функция
 
 
-    function successfulPurchasePassed() {
+    var blackWrapper = $(".blackWrapper"),
+        blSuccsess = $(".bl_successBuying"),
+        buttonClose = $(".bl_successBuying__close");
 
-        var blackWrapper = $(".blackWrapper"),
-            blSuccsess = $(".bl_successBuying"),
-            buttonClose = $(".bl_successBuying__close");
+
+    function showBlock() {
+
+        blackWrapper.removeClass("hidden");
+
+        blSuccsess.removeClass("hidden");
+        blSuccsess.removeClass("bounceOutUp");
+        blSuccsess.addClass("animated bounceInDown");
+    }
+
+    function hideBlock() {
+        blSuccsess.removeClass("bounceInDown");
+        blSuccsess.addClass("bounceOutUp");
+
+
+
+        setTimeout(function(){
+            blackWrapper.addClass("hidden");
+            blSuccsess.addClass("hidden");
+        },1000);
+    }
+
+
+
+
+
+    function successfulPurchasePassed() {
 
 
         setTimeout(showBlock, 200);
 
-        buttonClose.on("click", hideBlock);
-        blackWrapper.on("click", hideBlock);
-
-
-        function showBlock() {
-
-           blackWrapper.removeClass("hidden");
-           blackWrapper.animate({opacity: 0.6}, 300);
-
-            blSuccsess.removeClass("hidden");
-            blSuccsess.removeClass("bounceOutUp");
-            blSuccsess.addClass("animated bounceInDown");
-        }
-
-        function hideBlock() {
-            blSuccsess.removeClass("bounceInDown");
-            blSuccsess.addClass("bounceOutUp");
-            blackWrapper.animate({opacity: 0}, 400);
-
-
-            setTimeout(function(){
-                blackWrapper.addClass("hidden");
-                blSuccsess.addClass("hidden");
-            },1000);
-        }
-
-
-
+        buttonClose.on("click", hideBlock  );
+        blackWrapper.on("click", hideBlock  );
 
     }
 
 
 
     $(".btn_buy__send").on("click", successfulPurchasePassed); //// Заменить нажатие на кнопку на обработку события
+
+
+////////  CALLBAK FORM
+
+    var buttonCallBack = $(".btn_callBack"),
+        buttonCloseCallBack = $(".bl_callBack__close"),
+        blCallBack = $(".bl_callBack");
+
+
+    function showBlock2() {
+
+        blackWrapper.removeClass("hidden");
+
+        blCallBack.removeClass("hidden");
+        blCallBack.removeClass("bounceOutUp");
+        blCallBack.addClass("animated bounceInDown");
+    }
+
+    function hideBlock2() {
+        blCallBack.removeClass("bounceInDown");
+        blCallBack.addClass("bounceOutUp");
+
+
+
+        setTimeout(function(){
+            blackWrapper.addClass("hidden");
+            blCallBack.addClass("hidden");
+        },1000);
+    }
+
+
+    function callBackPassed() {
+
+
+        setTimeout(showBlock2, 200);
+
+        buttonCloseCallBack.on("click", hideBlock2  );
+        blackWrapper.on("click", hideBlock2  );
+
+    }
+
+
+
+    buttonCallBack.on("click", callBackPassed);
 
 
 

@@ -871,8 +871,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  background-color: #333333;
+  background-color: rgba(51, 51, 51, 0.6);
   z-index: 1075; }
 
 .bl_overflow {
@@ -1980,7 +1979,7 @@ button {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  border-left: 1px solid #0160ac; }
+  border-left: 1px solid #548301; }
 
 .review_text {
   vertical-align: top; }
@@ -3144,15 +3143,55 @@ li.inf_product__item {
   font-size: 16px;
   color: #de0914; }
 
+.bl_callBack {
+  position: fixed;
+  width: 310px;
+  min-height: 150px;
+  padding: 15px 10px;
+  top: 35%;
+  left: calc(50% - 150px);
+  background-color: #fff;
+  border: 2px solid #548301;
+  text-align: center;
+  z-index: 1080; }
+
+.bl_callBack {
+  margin: 4px 0;
+  font-size: 18px; }
+
+.bl_callBack__input {
+  border: 1px solid #548301; }
+  .bl_callBack__input:focus {
+    border-color: #6fa401; }
+  .bl_callBack__input::-webkit-input-placeholder {
+    text-align: center; }
+  .bl_callBack__input:-ms-input-placeholder {
+    text-align: center; }
+  .bl_callBack__input::placeholder {
+    text-align: center; }
+
+.bl_callBack__error {
+  min-height: 20px;
+  visibility: hidden; }
+
+.bl_callBack__submit {
+  margin: 5px 0;
+  color: #fff;
+  padding: 5px 10px;
+  background-color: #548301;
+  transition: all 0.3s; }
+  .bl_callBack__submit:hover, .bl_callBack__submit:focus {
+    background-color: #6fa401; }
+
 .bl_successBuying {
   position: fixed;
   width: 300px;
   min-height: 50px;
-  padding: 0 10px 15px;
+  padding: 15px 10px;
   top: 35%;
   left: calc(50% - 150px);
   background-color: #fff;
-  border: 2px solid #0160ac;
+  border: 2px solid #548301;
   text-align: center;
   z-index: 1080; }
 
@@ -3168,24 +3207,26 @@ li.inf_product__item {
   font-size: 24px;
   color: #0f0; }
 
-.bl_successBuying__close {
+.bl_successBuying__close,
+.bl_callBack__close {
   position: absolute;
-  top: -8px;
+  top: -6px;
   right: -4px;
   margin: 0;
   width: 20px;
   height: 20px;
   background: none;
   z-index: 3; }
-  .bl_successBuying__close:hover .decor_icon__close {
-    color: #0d8dd2; }
+  .bl_successBuying__close:hover .decor_icon__close,
+  .bl_callBack__close:hover .decor_icon__close {
+    color: #6fa401; }
 
 .decor_icon__close {
   width: 100%;
   height: 100%;
   display: block;
   font-size: 22px;
-  color: #0160ac; }
+  color: #548301; }
 
 .animated {
   -webkit-animation-duration: 1s;
