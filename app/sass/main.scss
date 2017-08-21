@@ -381,13 +381,15 @@ button {
 
     z-index: 11;
     &:before {
-      width: 16px;
+      width: 24px;
       height: 30px;
-      background: url("../image/arrow_left_bloсk.svg") 50% 50% no-repeat;
+      background: url("../image/arrow_left.svg") 50% 50% no-repeat;
+      background-size: cover;
+
     }
 
     &:hover {
-      background-color: $color_blue2;
+      background-color: $color_green2;
     }
 
   }
@@ -395,7 +397,8 @@ button {
   .owl-next {
     float: right;
     &:before {
-      background: url("../image/arrow_right_bloсk.svg") 50% 50% no-repeat;
+      background: url("../image/arrow_right.svg") 50% 50% no-repeat;
+      background-size: cover;
     }
   }
 }
@@ -576,28 +579,14 @@ button {
 .bl_mark {
   position: relative;
   width: 100px;
-  //height: 35px;
-  //position: absolute;
-  //width: 56px;
-  //height: 52px;
-  //
-  //left: -26px;
-  //top: -5px;
+  height: 35px;
 
   background-size: cover;
 
   &__hit {
     background: url("../image/snowflake.svg") 0 50% no-repeat;
   }
-
-  //&__action {
-  //  background: url("../image/fish_action.svg") 0 50% no-repeat;
-  //}
-  //
-  //&__new {
-  //  background: url("../image/fish_new.svg") 0 50% no-repeat;
-  //}
-
+  
 }
 
 .bl_mark__text {
@@ -618,10 +607,24 @@ button {
   text-transform: uppercase;
 
   &_action {
-    font-size: 22px;
+    background-color: #f7411c;
+  }
+  &_new {
+    padding: 2px 10px 2px 22px !important;
+    margin-left: 6px;
+    font-size: 20px;
+    text-transform: none;
+    background-color: #5a9ffd;
   }
 
+
 }
+
+
+.bl_mark__text_padding{
+  padding: 0 22px;
+}
+
 
 /////
 
@@ -780,20 +783,20 @@ button {
   }
 
 }
-
-.likeButton_icon-mark {
-  &:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 34px;
-    height: 40px;
-    background: url("../image/quantity.svg") 50% 50% no-repeat;
-  }
-}
+//
+//.likeButton_icon-mark {
+//  &:after {
+//    content: "";
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//
+//    width: 34px;
+//    height: 40px;
+//    background: url("../image/quantity.svg") 50% 50% no-repeat;
+//  }
+//}
 
 .likeButton_text {
   //width: 100%;
@@ -859,84 +862,84 @@ button {
 
 
 
-
-
-
-
-.bl_shopNews {
-  margin-top: 36px;
-  background-color: #fff;
-  width: 100%;
-  min-height: 400px;
-  padding: 0 20px;
-}
-
-.bl_shopNews__title {
-  //padding-top:22px;
-  line-height: 52px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.bl_shopNews__fullGroup {
-  width: 100%;
-  margin-top: 26px;
-  border-top: 1px solid $color_lightGrey;
-}
-
-.bl_shopNews__news {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-
-  color: $color_grey2;
-  font-family: $Tahoma;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.bl_shopNews__wrapperBlock {
-  margin-top: 18px;
-  line-height: 20px;
-  width: 100%;
-}
-
-.bl_shopNews__calendar {
-  float: left;
-  width: 14px;
-  height: 14px;
-  background: url("../image/calendar.svg") 50% 50% no-repeat;
-}
-
-.bl_shopNews__data {
-  float: left;
-  margin-left: 8px;
-
-}
-
-.bl_shopNews__data_text {
-
-  color: $color_grey2;
-  font-family: $Tahoma;
-  font-size: 14px;
-
-  &:before {
-    content: "/";
-    color: inherit;
-    padding: 0;
-  }
-  &:first-child:before {
-    content: "";
-  }
-
-}
-
-.bl_shopNews__moreInformation {
-  float: right;
-  color: $color_blue;
-  font-size: 14px;
-
-}
+//
+//
+//
+//
+//.bl_shopNews {
+//  margin-top: 36px;
+//  background-color: #fff;
+//  width: 100%;
+//  min-height: 400px;
+//  padding: 0 20px;
+//}
+//
+//.bl_shopNews__title {
+//  //padding-top:22px;
+//  line-height: 52px;
+//  text-align: center;
+//  text-transform: uppercase;
+//}
+//
+//.bl_shopNews__fullGroup {
+//  width: 100%;
+//  margin-top: 26px;
+//  border-top: 1px solid $color_lightGrey;
+//}
+//
+//.bl_shopNews__news {
+//  display: block;
+//  width: 100%;
+//  min-height: 30px;
+//
+//  color: $color_grey2;
+//  font-family: $Tahoma;
+//  font-size: 14px;
+//  font-weight: 400;
+//}
+//
+//.bl_shopNews__wrapperBlock {
+//  margin-top: 18px;
+//  line-height: 20px;
+//  width: 100%;
+//}
+//
+//.bl_shopNews__calendar {
+//  float: left;
+//  width: 14px;
+//  height: 14px;
+//  background: url("../image/calendar.svg") 50% 50% no-repeat;
+//}
+//
+//.bl_shopNews__data {
+//  float: left;
+//  margin-left: 8px;
+//
+//}
+//
+//.bl_shopNews__data_text {
+//
+//  color: $color_grey2;
+//  font-family: $Tahoma;
+//  font-size: 14px;
+//
+//  &:before {
+//    content: "/";
+//    color: inherit;
+//    padding: 0;
+//  }
+//  &:first-child:before {
+//    content: "";
+//  }
+//
+//}
+//
+//.bl_shopNews__moreInformation {
+//  float: right;
+//  color: $color_blue;
+//  font-size: 14px;
+//
+//}
 
 ///////////// CART PRODUCT
 
@@ -947,7 +950,7 @@ button {
   &__item {
     position: relative;
     display: inline-block;
-    padding-right: 4%;
+    padding-right: 3%;
     color: $color_grey2;
     font-family: $Tahoma;
     font-size: 14px;
@@ -955,11 +958,17 @@ button {
     text-decoration: underline;
 
     &:not(:last-child):after {
-      content: "";
+      content: "\f069";
+      font-family: $FontAwesom;
+      width: 10px;
+      height: 10px;
+      font-size: 10px;
+      color: #000;
       position: absolute;
-      top: 5px;
+      top: 2px;
       right: 10px;
       z-index: 3;
+
       //@include sprite($fish-breadcrumb);
     }
   }
@@ -1090,7 +1099,7 @@ button {
 .review_item__userName {
   display: inline-block;
   padding-bottom: 4px;
-  border-bottom: 2px solid $color_blue;
+  border-bottom: 2px solid $color_green2;
   font-family: $TahomaBold;
   color: $color_grey2;
   font-size: 18px;
@@ -1172,7 +1181,7 @@ button {
 
   width: 30px;
   height: 31px;
-  background: url("../image/loupe.svg");
+  background: url("../image/zoomIn.svg");
 }
 
 $minProductHeight: 610px; /////////////////////////////////
@@ -1189,12 +1198,14 @@ $minProductHeight: 610px; /////////////////////////////////
 .product_image__mainBlock {
   width: 100%;
   height: 100%;
-  //min-height: $minProductHeight;
+
+}
+
+.fancybox-animated{
+  cursor: zoom-in;
 }
 
 .product_image__slider {
-  //position: absolute;
-  //bottom: 0;
   width: 100%;
   padding-bottom: 25px;
   margin: 0 auto;
@@ -1253,7 +1264,7 @@ $minProductHeight: 610px; /////////////////////////////////
 
 .product_info__productAvailability__yes {
   font-family: $TahomaBold;
-  color: $color_blue;
+  color: $color_green;
 }
 
 .product_info__productAvailability__no {
@@ -1327,10 +1338,10 @@ $minProductHeight: 610px; /////////////////////////////////
   border: 1px solid $color_lightGrey;
 
   &:hover {
-    border-color: $color_blue;
+    border-color: $color_green2;
 
     .product_size__text {
-      color: $color_blue;
+      color: $color_green;
     }
   }
 
@@ -1455,7 +1466,7 @@ $minProductHeight: 610px; /////////////////////////////////
 
   overflow: auto;
 
-  border-bottom: 1px solid $color_blue;
+  border-bottom: 1px solid $color_green;
 }
 
 .bl_description__text {
@@ -1484,14 +1495,14 @@ $minProductHeight: 610px; /////////////////////////////////
   box-sizing: border-box;
   color: white;
   transition: all 0.2s;
-  background-color: $color_blue;
-  border: 1px solid $color_blue;
-  border-radius: 24px;
+  background-color: $color_green;
+  border: 1px solid $color_green;
+  border-radius: 5px;
 
   &:hover {
     transition: all 0.2s;
     background-color: #fff;
-    color: $color_blue;
+    color: $color_green;
   }
 
 }
@@ -1526,13 +1537,13 @@ $minProductHeight: 610px; /////////////////////////////////
 
 .btn_buy__overflow {
   position: relative;
-  border: 1px solid $color_blue;
+  border: 1px solid $color_green;
   box-sizing: border-box;
   margin: 0 auto;
   width: 250px;
   height: 50px;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 5px;
 }
 
 .btn_buy__input {
@@ -1559,10 +1570,10 @@ $minProductHeight: 610px; /////////////////////////////////
   width: 50px;
   height: 100%;
   color: #fff;
-  background-color: $color_blue;
+  background-color: $color_green;
 
   &:hover{
-    background-color: $color_blue2;
+    background-color: $color_green2;
   }
 }
 
@@ -1572,7 +1583,7 @@ $minProductHeight: 610px; /////////////////////////////////
   right: -8px;
   width: 19px;
   height: 20px;
-  background: url("../image/buy.svg") 50% 50% no-repeat;
+  background: url("../image/buy_click.svg") 50% 50% no-repeat;
   z-index: 4;
 }
 
@@ -1636,7 +1647,7 @@ $minProductHeight: 610px; /////////////////////////////////
   margin: 0 auto;
   width: 80px;
   height: 66px;
-  background: url("../image/delivery_block.svg") 50% 50% no-repeat;
+  background: url("../image/delivery.svg") 50% 50% no-repeat;
 
 }
 
@@ -1644,14 +1655,14 @@ $minProductHeight: 610px; /////////////////////////////////
   margin: 0 auto;
   width: 80px;
   height: 66px;
-  background: url("../image/payment_block.svg") 50% 50% no-repeat;
+  background: url("../image/payment.svg") 50% 50% no-repeat;
 }
 
 .bl_productAdvantagesExchange__icon-return {
   margin: 0 auto;
   width: 80px;
   height: 66px;
-  background: url("../image/return_block.svg") 50% 50% no-repeat;
+  background: url("../image/return.svg") 50% 50% no-repeat;
 }
 
 .bl_advantages__title {
@@ -1677,10 +1688,10 @@ $minProductHeight: 610px; /////////////////////////////////
 }
 
 .bl_advantages__link {
-  color: $color_blue;
+  color: $color_green;
   text-decoration: underline;
   &:hover {
-    color: $color_blue;
+    color: $color_green;
   }
 }
 
@@ -1722,7 +1733,7 @@ div#theCaption {
 }
 
 .highslide-caption {
-  background-color: #6699cc;
+  background-color: $color_green2;
 }
 
 ////// information about product
@@ -1773,17 +1784,22 @@ li.inf_product__item {
   }
 }
 
+
+
 .inf_product__tabs .inf_product__item.active a {
   border: none;
   border-radius: 0;
-  border-top: 2px solid #0160ac;
+  border-top: 2px solid $color_green;
+  background-color: $color_greenOpacity;
   color: #000;
 
   &:hover,
   &:focus,
   &:active {
     border: none;
-    border-top: 2px solid #0160ac;
+    color: #000;
+    background-color: $color_greenOpacity;
+    border-top: 2px solid $color_green;
   }
 }
 
@@ -1847,7 +1863,7 @@ li.inf_product__item {
   width: 40px;
   height: 40px;
   border: 1px solid black;
-  background-color: $color_blue;
+  background-color: $color_green;
   color: #fff;
 }
 
@@ -1915,20 +1931,20 @@ li.inf_product__item {
   line-height: 36px;
   cursor: pointer;
   &:hover {
-    color: $color_blue;
+    color: $color_green;
     transition: all 0.2s;
   }
 }
 
 .bl_filters__caterogyName_active {
-  color: $color_red;
+  color: $color_green;
 }
 
 .filter_name {
   position: relative;
   font-size: 16px;
   line-height: 30px;
-  color: $color_blue;
+  color: #333;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1938,7 +1954,7 @@ li.inf_product__item {
 
   &:after {
     font-size: 14px;
-    color: $color_blue;
+    color: $color_green;
     font-weight: 400;
     position: absolute;
     right: 0;
@@ -1952,7 +1968,7 @@ li.inf_product__item {
     position: relative;
     &:after {
       font-size: 14px;
-      color: $color_red;
+      color: $color_green;
       font-weight: 400;
       position: absolute;
       right: 0;
@@ -1968,10 +1984,10 @@ li.inf_product__item {
   position: relative;
 
   &:after {
-    font-size: 16px;
+    font-size: 24px;
     color: inherit;
     position: absolute;
-    left: -14px;
+    left: -20px;
     top: 0;
     content: "\f0da";
     font-family: $FontAwesom;
@@ -2014,7 +2030,7 @@ li.inf_product__item {
   color: $color_grey2;
   cursor: pointer;
   &:hover {
-    color: $color_blue;
+    color: $color_green;
     transition: all 0.2s;
   }
 }
@@ -2024,7 +2040,7 @@ li.inf_product__item {
 }
 
 .bl_filters__subName_active {
-  color: $color_blue;
+  color: $color_green;
 }
 
 .bl_filters__productsFilters {
@@ -2043,7 +2059,7 @@ li.inf_product__item {
     top: 35%;
     left: 0;
     border-radius: 50%;
-    background-color: $color_blue;
+    background-color: $color_green;
     text-shadow: 0.5px 0.9px 3px rgba(0, 0, 0, 0.2);
     line-height: 36px;
   }
@@ -2064,7 +2080,7 @@ li.inf_product__item {
   font-family: $FontAwesom;
   font-size: 14px;
   font-weight: 400;
-  color: $color_red;
+  color: $color_green;
   z-index: 4;
 }
 
@@ -2100,56 +2116,17 @@ li.inf_product__item {
   transition: all 0.2s;
   &__active {
     transition: all 0.2s;
-    color: $color_pink;
+    color: #51c010;
   }
 
   &:hover {
-    color: $color_pink;
+    color: $color_green;
     transition: all 0.2s;
   }
 }
 
-/////
 
-.bl_subCategories {
 
-  width: 100%;
-}
-
-.bl_subCategories__item {
-
-  box-sizing: border-box;
-
-}
-
-.bl_subCategories__link {
-  display: block;
-  text-align: center;
-  width: 100%;
-
-  &:hover .bl_subCategories__text {
-    color: $color_red;
-    text-decoration: none;
-    transition: 0.2s color;
-  }
-}
-
-.bl_subCategories__image {
-  margin: 14px auto 0;
-  height: 120px; ////////
-  display: block;
-}
-
-.bl_subCategories__text {
-
-  color: $color_blue;
-  font-family: $Tahoma;
-  font-size: 14px;
-  line-height: 18px;
-
-  transition: 0.2s color;
-  text-decoration: underline;
-}
 
 .bl_fullProducts {
   margin-top: 16px;
@@ -2184,7 +2161,7 @@ li.inf_product__item {
 
     width: 12px;
     height: 8px;
-    color: $color_blue;
+    color: $color_brown;
 
     font-size: 18px;
     font-weight: 400;
@@ -2215,7 +2192,7 @@ li.inf_product__item {
 
     width: 12px;
     height: 8px;
-    color: $color_blue;
+    color: $color_brown;
 
     font-size: 18px;
     font-weight: 400;
@@ -2246,14 +2223,14 @@ li.inf_product__item {
   &__button {
     position: relative;
     display: inline-block;
-    color: #cadded;
+    color: #c5bdb9;
     width: 28px;
     height: 28px;
   }
 }
 
 .bl_positionSorted__ratio:checked + .bl_positionSorted__label .bl_positionSorted__button {
-  color: $color_blue;
+  color: $color_green;
 }
 
 .view_columns {
@@ -2297,7 +2274,7 @@ li.inf_product__item {
 .bl_catalog__fullProducts {
   width: 100%;
   height: 100%;
-  margin-top: 16px;
+  margin-top: 23px; // должно совпадать с отступом левого блока по верхнему
   padding-top: 15px;
 }
 
@@ -2555,15 +2532,13 @@ li.inf_product__item {
     width: 34px;
     height: 34px;
     vertical-align: top;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.17);
-    border: 2px solid #fff;
-    border-radius: 50% !important;
-    background-image: linear-gradient(to top, #0160ac 0%, #1d82d3 100%);
+    border-radius: 3px;
+    background-color: $color_green;
 
     &:focus,
     &:active {
-      background-color: $color_pink;
-      color: #000 !important;
+      background-color: $color_brown;
+      color: #fff;
     }
   }
 }
@@ -2571,7 +2546,8 @@ li.inf_product__item {
 // Article
 
 .catalog_article {
-  margin-top: 10px;
+  clear: both;
+  margin-top: 37px;
   padding: 23px 20px;
   width: 100%;
 

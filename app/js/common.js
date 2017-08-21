@@ -359,7 +359,7 @@ $(document).ready(function () {
             $(this).addClass("bl_filters__caterogyName_active");
 
             $(this).next().toggleClass("hidden");
-            $(this).toggleClass("decor_triangle__active");
+            $(this).toggleClass("decor_leftTriangle__active");
 
         });
 
