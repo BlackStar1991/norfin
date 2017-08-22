@@ -1041,6 +1041,7 @@ button {
 .bl_raiting__button {
   position: relative;
   display: inline-block;
+  background: none;
   background-color: inherit;
   text-decoration: underline;
   z-index: 5;
@@ -1358,7 +1359,8 @@ $minProductHeight: 610px; /////////////////////////////////
 }
 
 .product_size__input:checked + .product_size__text {
-  color: $color_red;
+  color: #000;
+  font-family: $TahomaBold;
 }
 
 .product_sizeDescription {
@@ -1571,6 +1573,7 @@ $minProductHeight: 610px; /////////////////////////////////
   height: 100%;
   color: #fff;
   background-color: $color_green;
+  box-sizing: border-box;
 
   &:hover{
     background-color: $color_green2;
@@ -1579,11 +1582,19 @@ $minProductHeight: 610px; /////////////////////////////////
 
 .btn_buy__send_icon {
   position: absolute;
-  top: -10px;
-  right: -8px;
-  width: 19px;
+  top: 50%;
+  left: 50%;
+vertical-align: middle;
+
+
+  -ms-transform: translate(-50%, -25%);
+  -moz-transform: translate(-50%, -25%);
+  transform: translate(-50%, -50%);
+
+  width: 20px;
   height: 20px;
   background: url("../image/buy_click.svg") 50% 50% no-repeat;
+  background-size: cover;
   z-index: 4;
 }
 
@@ -1764,7 +1775,7 @@ li.inf_product__item {
 }
 
 .inf_product .tab-content {
-  padding: 10px 30px 32px 20px;
+  padding: 0 30px 32px 20px;
 }
 
 .tab-content .tab-pane li {
