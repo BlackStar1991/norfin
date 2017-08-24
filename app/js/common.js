@@ -30,7 +30,7 @@ $(document).ready(function () {
         fieldAdress = $(".code_adress__full");
 
 
-    var buttonFilterCategories =$(".rubric__title_button__categories"),
+    var buttonFilterCategories = $(".rubric__title_button__categories"),
         fieldFilterCategories = $(".bl_filters");
 
     var buttonAllFilters = $(".rubric__title_button__filters"),
@@ -61,14 +61,11 @@ $(document).ready(function () {
     }
 
 
-
     // hideShowEffect($(".bl_currency__active"), $(".bl_currency__variables"));
     // hideShowEffect($(".bl_currency__variables_item"), $(".bl_currency__variables"));
     //
     // hideShowEffect($(".bl_language__active"), $(".bl_language__variables"));
     // hideShowEffect($(".bl_language__variables_item"), $(".bl_language__variables"));
-
-
 
 
 /// buttons must work only  $(window).width() <=991px
@@ -82,7 +79,7 @@ $(document).ready(function () {
             sliderEffectForButtons(buttonContacts, fieldContacts, 600);
             sliderEffectForButtons(buttonAdress, fieldAdress, 600);
             sliderEffectForButtons(buttonFilterCategories, fieldFilterCategories, 600);
-            sliderEffectForButtons(buttonAllFilters, fieldAllFilters , 600);
+            sliderEffectForButtons(buttonAllFilters, fieldAllFilters, 600);
 
         } else {
             return false;
@@ -91,8 +88,6 @@ $(document).ready(function () {
     }
 
     liveScopeOfButtons();
-
-
 
 
     //// Main-slider
@@ -384,19 +379,18 @@ $(document).ready(function () {
         });
 
 
-
     }
 
 
-    $(".bl_filter__label").on("click", function(event){
+    $(".bl_filter__label").on("click", function (event) {
 
         $(this).find(".filter_text").toggleClass("filter_text__active");
 
-            if ($(this).find(".bl_filter__checkbox").prop("checked") === true){
-                $(this).find(".bl_filter__checkbox").prop("checked", false);
-            }else{
-                $(this).find(".bl_filter__checkbox").prop("checked", true);
-            }
+        if ($(this).find(".bl_filter__checkbox").prop("checked") === true) {
+            $(this).find(".bl_filter__checkbox").prop("checked", false);
+        } else {
+            $(this).find(".bl_filter__checkbox").prop("checked", true);
+        }
 
 
         event.preventDefault();
@@ -429,7 +423,7 @@ $(document).ready(function () {
         classGrid = "view_grid__STYLE",
         classList = "view_list__STYLE",
 
-        bl_fullProducts__item =$(".bl_fullProducts__item"),
+        bl_fullProducts__item = $(".bl_fullProducts__item"),
 
         code_listView1 = $(".code_listView1"),
         code_listView2 = $(".code_listView2"),
@@ -437,10 +431,9 @@ $(document).ready(function () {
         code_listView4 = $(".code_listView4"),
 
 
-
         allProducts = $(".bl_products");
 
-    buttonGridView.on("click", function(){
+    buttonGridView.on("click", function () {
         allProducts.removeClass(classList);
         allProducts.addClass(classGrid);
 
@@ -451,7 +444,7 @@ $(document).ready(function () {
         code_listView4.removeClass("bl_fullProducts__listStyle");
     });
 
-    buttonListView.on("click", function(){
+    buttonListView.on("click", function () {
         allProducts.removeClass(classGrid);
         allProducts.addClass(classList);
 
@@ -463,8 +456,6 @@ $(document).ready(function () {
 
 
     });
-
-
 
 
 //// Short description
@@ -495,8 +486,9 @@ $(document).ready(function () {
 
 
 // Ancor to top
+    var ancor = $(".bl_ancor");
 
-    $(".bl_ancor").on("click", "a", function (event) {
+    ancor.on("click", "a", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
@@ -506,7 +498,7 @@ $(document).ready(function () {
 // FILTER for telephone number
 
     var telephonseInput = $("input[type='tel']");
-    telephonseInput.mask( "+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
+    telephonseInput.mask("+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
 
 
 /// Success Buying
@@ -518,41 +510,44 @@ $(document).ready(function () {
         buttonClose = $(".bl_successBuying__close");
 
 
-    function showBlock() {
+    function showBlock(workerPlace) {
 
         blackWrapper.removeClass("hidden");
 
-        blSuccsess.removeClass("hidden");
-        blSuccsess.removeClass("bounceOutUp");
-        blSuccsess.addClass("animated bounceInDown");
+        workerPlace.removeClass("hidden");
+        workerPlace.removeClass("bounceOutUp");
+        workerPlace.addClass("animated bounceInDown");
     }
 
-    function hideBlock() {
-        blSuccsess.removeClass("bounceInDown");
-        blSuccsess.addClass("bounceOutUp");
+    function hideBlock(workerPlace) {
+        workerPlace.removeClass("bounceInDown");
+        workerPlace.addClass("bounceOutUp");
 
 
-
-        setTimeout(function(){
+        setTimeout(function () {
             blackWrapper.addClass("hidden");
-            blSuccsess.addClass("hidden");
-        },1000);
+            workerPlace.addClass("hidden");
+        }, 1000);
     }
-
-
-
 
 
     function successfulPurchasePassed() {
 
+        // Show successfulPurchasePassedForm
+        setTimeout(function () {
+            showBlock(blSuccsess)
+        }, 200);
+        // Hide successfulPurchasePassedForm
+        buttonClose.on("click", function () {
+            hideBlock(blSuccsess);
+        });
 
-        setTimeout(showBlock, 200);
-
-        buttonClose.on("click", hideBlock  );
-        blackWrapper.on("click", hideBlock  );
+        // Hide successfulPurchasePassedForm
+        blackWrapper.on("click", function () {
+            hideBlock(blSuccsess);
+        });
 
     }
-
 
 
     $(".btn_buy__send").on("click", successfulPurchasePassed); //// Заменить нажатие на кнопку на обработку события
@@ -565,42 +560,24 @@ $(document).ready(function () {
         blCallBack = $(".bl_callBack");
 
 
-    function showBlock2() {
-
-        blackWrapper.removeClass("hidden");
-
-        blCallBack.removeClass("hidden");
-        blCallBack.removeClass("bounceOutUp");
-        blCallBack.addClass("animated bounceInDown");
-    }
-
-    function hideBlock2() {
-        blCallBack.removeClass("bounceInDown");
-        blCallBack.addClass("bounceOutUp");
-
-
-
-        setTimeout(function(){
-            blackWrapper.addClass("hidden");
-            blCallBack.addClass("hidden");
-        },1000);
-    }
-
-
     function callBackPassed() {
+        // Show callBackForm
+        setTimeout(function () {
+            showBlock(blCallBack)
+        }, 200);
 
+        // Hide callBackForm
+        buttonCloseCallBack.on("click", function () {
+            hideBlock(blCallBack);
+        });
 
-        setTimeout(showBlock2, 200);
-
-        buttonCloseCallBack.on("click", hideBlock2  );
-        blackWrapper.on("click", hideBlock2  );
-
+        // Hide callBackForm
+        blackWrapper.on("click", function () {
+            hideBlock(blCallBack);
+        });
     }
-
-
 
     buttonCallBack.on("click", callBackPassed);
-
 
 
 ////// Product quantity

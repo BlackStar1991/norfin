@@ -9,7 +9,7 @@ var gulp = require("gulp"),                             // gulp core
     uglify = require('gulp-uglify'),                    // uglifies the js
     rename = require('gulp-rename'),                    // rename files
     useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
-    minifyCss = require('gulp-minify-css'),             // minify the css files
+    cleanCSS = require('gulp-clean-css'),               // minify the css files
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     browserSync = require('browser-sync').create(),     // inject code to all devices
     imagemin = require('gulp-imagemin'),                // minify images
@@ -127,6 +127,16 @@ gulp.task('extrass', function () {
     ]).pipe(gulp.dest('dist'));                         // where to put the files
 });
 
+/*********************************************/
+/*CSS TASKS*/
+/*********************************************/
+
+gulp.task('minify-css', function() {
+    return gulp.src('app/css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/css/'));
+});
+
 
 /*********************************************/
 /*BUILD TASKS*/
@@ -147,7 +157,7 @@ gulp.task('build', ['clean'], function () {
     return gulp.src('app/*.html')
 
         .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', minifyCss()))             // minify css-files
+        .pipe(gulpif('*.css', cleanCSS()))              // minify css-files
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
 });

@@ -1565,7 +1565,7 @@ button {
   margin: auto;
   max-width: 250px;
   color: white;
-  font-family: "Arial Narrow";
+  font-family: 'Arial Narrow', arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1618,7 +1618,7 @@ button {
 .bl_sale__text {
   text-align: center;
   color: #fff;
-  font-family: "Arial Narrow";
+  font-family: 'Arial Narrow', arial, sans-serif;
   font-size: 18px;
   line-height: 2; }
 
@@ -2091,6 +2091,7 @@ button {
 .product_image__sliderImg {
   max-height: 110px;
   object-fit: contain;
+  background-size: contain;
   display: inline-block;
   margin: 0 auto;
   cursor: pointer; }
@@ -2258,6 +2259,7 @@ button {
   margin: 0 auto;
   width: 40px;
   height: 100%;
+  background-color: #fff;
   box-sizing: border-box; }
   .block_quantity__input::-webkit-input-placeholder {
     display: inline-block;
@@ -2384,13 +2386,13 @@ button {
   .btn_buy__send:hover {
     background-color: #6fa401; }
 
-.btn_buy__send_icon {
+.icon_buy {
   position: absolute;
   top: 50%;
   left: 50%;
   vertical-align: middle;
-  -ms-transform: translate(-50%, -25%);
   -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
@@ -3600,7 +3602,7 @@ li.inf_product__item {
   .icon-map:before {
     display: none; }
   .footer_firstPart {
-    margin-bottom: 10px; }
+    padding-bottom: 10px; }
   .bl_breadcrumbs__item:not(:last-child):after {
     right: 4px; } }
 

@@ -13,7 +13,6 @@
 @include font-face("Tahoma", "../fonts/Tahoma/Tahoma", 400, normal, eot ttf woff);
 @include font-face("TahomaBold", "../fonts/TahomaBold/Tahoma-Bold", 700, normal, eot ttf woff);
 
-
 /*********************************************/
 /*MAIN STYLES*/
 /*********************************************/
@@ -76,14 +75,13 @@ body {
   position: relative;
   flex: 1 0 auto;
 
-
   overflow: hidden; ///////////////////////
 }
 
-.decor_snowflake1{
+.decor_snowflake1 {
   position: relative;
 
-  &:before{
+  &:before {
 
     content: "";
     position: absolute;
@@ -99,7 +97,7 @@ body {
     z-index: -1;
   }
 
-  &:after{
+  &:after {
     content: "";
     position: absolute;
 
@@ -114,7 +112,6 @@ body {
   }
 
 }
-
 
 .footer {
   flex: 0 0 auto;
@@ -193,8 +190,6 @@ button {
   margin: 0 !important;
   //overflow: hidden;
 }
-
-
 
 .title_name {
   margin-top: 0;
@@ -316,17 +311,15 @@ button {
 
 //corrected style
 
-.owl-carousel.bl_mainSlider{
+.owl-carousel.bl_mainSlider {
 
-  .owl-prev{
+  .owl-prev {
     left: 18px;
   }
-  .owl-next{
+  .owl-next {
     right: 18px;
   }
 }
-
-
 
 .slider_popular.owl-carousel .owl-nav,
 .slider_newProducts.owl-carousel .owl-nav,
@@ -413,8 +406,7 @@ button {
 
 // OWL END
 
-
-.bl_dayProduct{
+.bl_dayProduct {
   clear: both;
   margin-top: 36px;
   position: relative;
@@ -423,28 +415,26 @@ button {
   background-color: #fff;
 }
 
-.bl_dayProduct__actual{
+.bl_dayProduct__actual {
   margin: 30px auto 0;
   width: 315px; /////////////////////
   box-sizing: border-box;
 }
 
-
-.bl_dayProduct__actual_text{
+.bl_dayProduct__actual_text {
   position: relative;
   text-align: center;
-  margin:auto;
+  margin: auto;
   max-width: 250px;
   color: white;
-  font-family: "Arial Narrow";
+  font-family: 'Arial Narrow', arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
   background-color: $color_brown;
 }
 
-
-.bl_dayProduct__actual_img{
+.bl_dayProduct__actual_img {
   display: block;
   margin: 0 auto;
   max-width: 250px; //////////
@@ -452,7 +442,7 @@ button {
 
 }
 
-.bl_dayProduct__title{
+.bl_dayProduct__title {
   position: relative;
   margin-top: 30px;
   height: 40px;
@@ -463,27 +453,27 @@ button {
 
 }
 
-.bl_dayProduct__link{
+.bl_dayProduct__link {
   display: block;
   width: 100%;
   height: 100%;
 
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 }
 
-.bl_dayProduct__minBlock{
+.bl_dayProduct__minBlock {
   width: 100%;
   height: 100%;
-  min-height:275px;
+  min-height: 275px;
   border-left: 1px solid $color_lightGrey;
   text-align: center;
 
   border: 1px solid red;
 }
 
-.bl_dayProduct__minBlocks_text{
+.bl_dayProduct__minBlocks_text {
   margin-top: 30px;
   text-align: center;
   color: #333;
@@ -491,7 +481,7 @@ button {
   font-size: 18px;
 }
 
-.bl_sale{
+.bl_sale {
   position: relative;
   margin: 17px auto 0;
 
@@ -500,23 +490,20 @@ button {
   background-color: $color_brown;
 }
 
-.bl_sale__text{
+.bl_sale__text {
   text-align: center;
   color: #fff;
-  font-family: "Arial Narrow";
+  font-family: 'Arial Narrow', arial, sans-serif;
   font-size: 18px;
   line-height: 2;
 }
 
-.bl_dayProduct__minImage{
+.bl_dayProduct__minImage {
   display: block;
   margin: 16px auto 0;
   width: 100%;
   max-width: 150px;
 }
-
-
-
 
 .bl_popular {
   clear: both;
@@ -575,7 +562,6 @@ button {
 
 // MARK (layba)
 
-
 .bl_mark {
   position: relative;
   width: 100px;
@@ -586,7 +572,7 @@ button {
   &__hit {
     background: url("../image/snowflake.svg") 0 50% no-repeat;
   }
-  
+
 }
 
 .bl_mark__text {
@@ -617,17 +603,13 @@ button {
     background-color: #5a9ffd;
   }
 
-
 }
 
-
-.bl_mark__text_padding{
+.bl_mark__text_padding {
   padding: 0 22px;
 }
 
-
 /////
-
 
 .product_sliderCart__link {
 
@@ -654,7 +636,7 @@ button {
 }
 
 .product_sliderCart__price {
-  max-width:250px;
+  max-width: 250px;
   width: 100%;
   margin: 22px auto 16px;
 }
@@ -783,6 +765,7 @@ button {
   }
 
 }
+
 //
 //.likeButton_icon-mark {
 //  &:after {
@@ -833,15 +816,14 @@ button {
 
 //
 
-
-.bl_aboutShop{
+.bl_aboutShop {
   width: 100%;
   padding: 22px;
   margin: 35px 0;
   background-color: #fff;
 }
 
-.bl_aboutShop__title{
+.bl_aboutShop__title {
   margin: 0;
   color: #333;
   font-family: $TahomaBold;
@@ -849,18 +831,11 @@ button {
   line-height: 24px;
 }
 
-.bl_aboutShop__paragraph{
+.bl_aboutShop__paragraph {
   margin-top: 10px;
   color: #333;
   line-height: 24px;
 }
-
-
-
-
-
-
-
 
 //
 //
@@ -1093,7 +1068,7 @@ button {
   border-left: 1px solid $color_green;
 }
 
-.review_text{
+.review_text {
   vertical-align: top;
 }
 
@@ -1144,7 +1119,7 @@ button {
 
 }
 
-.bl_review__raiting{
+.bl_review__raiting {
   margin-top: 4px;
 }
 
@@ -1202,7 +1177,7 @@ $minProductHeight: 610px; /////////////////////////////////
 
 }
 
-.fancybox-animated{
+.fancybox-animated {
   cursor: zoom-in;
 }
 
@@ -1226,10 +1201,10 @@ $minProductHeight: 610px; /////////////////////////////////
 }
 
 .product_image__sliderImg {
-  //width: auto !important;
+
   max-height: 110px;
   object-fit: contain;
-  //object-fit: cover;
+  background-size: contain;
   display: inline-block;
   margin: 0 auto;
   cursor: pointer;
@@ -1447,6 +1422,7 @@ $minProductHeight: 610px; /////////////////////////////////
   margin: 0 auto;
   width: 40px;
   height: 100%;
+  background-color: #fff;
   box-sizing: border-box;
 
   &::placeholder {
@@ -1575,22 +1551,17 @@ $minProductHeight: 610px; /////////////////////////////////
   background-color: $color_green;
   box-sizing: border-box;
 
-  &:hover{
+  &:hover {
     background-color: $color_green2;
   }
 }
 
-.btn_buy__send_icon {
+.icon_buy {
   position: absolute;
   top: 50%;
   left: 50%;
-vertical-align: middle;
-
-
-  -ms-transform: translate(-50%, -25%);
-  -moz-transform: translate(-50%, -25%);
+  vertical-align: middle;
   transform: translate(-50%, -50%);
-
   width: 20px;
   height: 20px;
   background: url("../image/buy_click.svg") 50% 50% no-repeat;
@@ -1794,8 +1765,6 @@ li.inf_product__item {
     background-color: #fff;
   }
 }
-
-
 
 .inf_product__tabs .inf_product__item.active a {
   border: none;
@@ -2136,9 +2105,6 @@ li.inf_product__item {
   }
 }
 
-
-
-
 .bl_fullProducts {
   margin-top: 16px;
   padding: 20px 15px;
@@ -2219,9 +2185,6 @@ li.inf_product__item {
   text-indent: 10px;
 }
 
-
-
-
 .bl_positionSorted {
   position: relative;
   float: right;
@@ -2295,7 +2258,7 @@ li.inf_product__item {
 
   .bl_fullProducts__options,
   .product_info__id,
-  .product_info__productAvailability{
+  .product_info__productAvailability {
     display: none;
   }
 
@@ -2350,18 +2313,14 @@ li.inf_product__item {
   color: $color_grey2;
   font-size: 16px;
 
-
-
 }
 
-.bl_fullProducts__link{
-
+.bl_fullProducts__link {
 
   &:hover {
     text-decoration: underline;
   }
 }
-
 
 .bl_fullProducts__price {
   color: $color_grey2;
@@ -2390,7 +2349,7 @@ li.inf_product__item {
 
 //////  LIST VIEW
 
-.view_list__STYLE .bl_fullProducts__item{
+.view_list__STYLE .bl_fullProducts__item {
   min-height: 298px;
 }
 
@@ -2406,7 +2365,7 @@ li.inf_product__item {
 }
 
 .view_list__STYLE .bl_fullProducts__title,
-.view_list__STYLE .bl_fullProducts__options{
+.view_list__STYLE .bl_fullProducts__options {
   display: block;
   height: auto;
   margin: 0;
@@ -2416,11 +2375,8 @@ li.inf_product__item {
   text-align: left;
 }
 
-
-
-
 .view_list__STYLE .product_info__id,
-.view_list__STYLE .product_info__productAvailability{
+.view_list__STYLE .product_info__productAvailability {
   display: block;
   margin-top: 5px;
   text-align: left;
@@ -2429,32 +2385,28 @@ li.inf_product__item {
 
 .view_list__STYLE .bl_fullProducts__oldPrice,
 .view_list__STYLE .bl_fullProducts__newPrice,
-.view_list__STYLE .bl_fullProducts__normal{
+.view_list__STYLE .bl_fullProducts__normal {
   margin-top: 40px;
 }
 
-.view_list__STYLE .bl_fullProducts__oldPrice{
+.view_list__STYLE .bl_fullProducts__oldPrice {
   float: right;
   font-size: 21px;
 }
 
-.view_list__STYLE .bl_fullProducts__newPrice{
+.view_list__STYLE .bl_fullProducts__newPrice {
   float: left;
   font-size: 23px;
   font-family: $TahomaBold;
 }
 
-
-
 .view_list__STYLE .bl_fullProducts__listStyle {
   max-width: 250px;
 }
 
-
-.view_list__STYLE .button_buy{
+.view_list__STYLE .button_buy {
   margin-top: 16px;
 }
-
 
 // PAGINATION
 
@@ -2587,14 +2539,14 @@ li.inf_product__item {
   width: 162px;
 }
 
-.error_text{
+.error_text {
   font-size: 16px;
   color: $color_red;
 }
 
 // CALLBACK
 
-.bl_callBack{
+.bl_callBack {
   position: fixed;
   width: 310px;
   min-height: 150px;
@@ -2609,21 +2561,19 @@ li.inf_product__item {
   z-index: 1080;
 }
 
-.bl_callBack{
-  margin:4px 0;
+.bl_callBack {
+  margin: 4px 0;
   font-size: 18px;
 }
 
-.bl_callBack__input{
+.bl_callBack__input {
   border: 1px solid $color_green;
 
-
-
-  &:focus{
+  &:focus {
     border-color: $color_green2;
   }
 
-  &::placeholder{
+  &::placeholder {
     //text-indent: 20px;
     text-align: center;
   }
@@ -2634,24 +2584,23 @@ li.inf_product__item {
   visibility: hidden;
 }
 
-.bl_callBack__submit{
+.bl_callBack__submit {
   margin: 5px 0;
   color: #fff;
   padding: 5px 10px;
   background-color: $color_green;
 
-  transition: all 0.3s ;
+  transition: all 0.3s;
 
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $color_green2;
   }
 }
 
-
 /// success Buying
 
-.bl_successBuying{
+.bl_successBuying {
   position: fixed;
   width: 300px;
   min-height: 50px;
@@ -2666,7 +2615,7 @@ li.inf_product__item {
   z-index: 1080;
 }
 
-.bl_successBuying__text{
+.bl_successBuying__text {
   position: relative;
   margin-top: 10px;
   font-size: 16px;
@@ -2674,8 +2623,8 @@ li.inf_product__item {
 
 }
 
-.decor_icon__seccuess{
-  &:before{
+.decor_icon__seccuess {
+  &:before {
     content: "\f00c";
     font-family: $FontAwesom;
     font-size: 24px;
@@ -2685,7 +2634,7 @@ li.inf_product__item {
 }
 
 .bl_successBuying__close,
-.bl_callBack__close{
+.bl_callBack__close {
   position: absolute;
   top: -6px;
   right: -4px;
@@ -2695,27 +2644,25 @@ li.inf_product__item {
   background: none;
   z-index: 3;
 
-  &:hover{
-    .decor_icon__close{
-        color: $color_green2;
+  &:hover {
+    .decor_icon__close {
+      color: $color_green2;
     }
   }
 }
 
-.decor_icon__close{
+.decor_icon__close {
   width: 100%;
   height: 100%;
   display: block;
-    font-size: 22px;
-    color: $color_green;
+  font-size: 22px;
+  color: $color_green;
 }
-
 
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
-
 
 .bounceInDown {
   animation-name: bounceInDown;
