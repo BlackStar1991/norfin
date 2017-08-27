@@ -225,7 +225,7 @@ $marginTopItem: 30px;
   margin-top: 13%;
   width: 100%;
   max-width: 400px;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 .bl_search__field {
@@ -246,6 +246,10 @@ $marginTopItem: 30px;
     font-size: 14px;
 
   }
+  &:hover{
+    box-shadow: 0 0 10px 1px $color_green2;
+  }
+
   &:focus {
     border-color: $color_green;
   }

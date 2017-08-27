@@ -131,9 +131,12 @@ gulp.task('extrass', function () {
 /*CSS TASKS*/
 /*********************************************/
 
-gulp.task('minify-css', function() {
+gulp.task('minifyCss', function() {
     return gulp.src('app/css/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
+
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css/'));
 });
 
@@ -152,12 +155,14 @@ gulp.task('build', ['clean'], function () {
     gulp.start('images');                               // images task
     gulp.start('fonts');                                // fonts task
     gulp.start('libs');                                 // libs task
+
     gulp.start('extrass');                              // extras task
+    gulp.start('minifyCss');
 
     return gulp.src('app/*.html')
 
         .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', cleanCSS()))              // minify css-files
+        .pipe(gulpif('*.css', cleanCSS()))
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
 });
