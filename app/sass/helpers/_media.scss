@@ -338,23 +338,16 @@
     left: 15%;
   }
 
-
+  .bl_receiver,
+  .bl_deliveryMethod{
+    min-height: 310px;
+  }
 
 
 }
 
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
-  //
-  //.bl_phones__left,
-  //.bl_phones__right {
-  //  float: none;
-  //  display: block;
-  //}
-
-  //.bl_search__button{
-  //  top: 14px;
-  //}
 
   .bl_phones {
     float: none;
@@ -377,8 +370,6 @@
     left: -24px;
   }
 
-
-
   .bl_productAdvantages {
     display: none;
   }
@@ -386,6 +377,13 @@
   .rubric__title_button {
     left: 5%;
   }
+
+
+  .bl_receiver, .bl_deliveryMethod{
+    padding: 10px 20px;
+  }
+
+
 
 }
 
