@@ -1724,7 +1724,7 @@ button {
 .product_sliderCart__name {
   position: relative;
   display: block;
-  margin: 30px auto 0;
+  margin: 0 auto;
   text-align: center;
   width: 154px;
   height: 82px;
@@ -1738,7 +1738,7 @@ button {
 .product_sliderCart__price {
   max-width: 250px;
   width: 100%;
-  margin: 22px auto 16px; }
+  margin: 0 auto 16px; }
 
 .product_sliderCart__price_oldPrice {
   float: left;
@@ -2050,6 +2050,11 @@ button {
   padding-top: 4px;
   float: right; }
 
+.review_allReview p {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+
 .product_image {
   width: 100%;
   border-right: 1px solid #f1f1f1;
@@ -2316,6 +2321,12 @@ button {
     font-size: 14px;
     line-height: 1; }
 
+#tab-description p {
+  margin-top: 10px;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 400; }
+
 .button_buy {
   display: block;
   margin: 8px auto 0;
@@ -2579,6 +2590,9 @@ li.inf_product__item {
   line-height: 27px;
   box-sizing: border-box;
   background-color: inherit; }
+
+li.inf_product__item.inf_product__item_correctForTwo {
+  width: 50%; }
 
 .inf_product .tab-content {
   padding: 0 30px 32px 20px; }
@@ -3164,8 +3178,8 @@ li.inf_product__item {
   border-bottom: none;
   background-color: #f00; }
 
-.pagination a.bl_pagination__link_number__active,
-.pagination .active a.bl_pagination__link_number__active {
+.pagination span.bl_pagination__link_number__active,
+.pagination .active span.bl_pagination__link_number__active {
   position: relative;
   color: #fff;
   width: 34px;
@@ -3173,9 +3187,9 @@ li.inf_product__item {
   vertical-align: top;
   border-radius: 3px;
   background-color: #548301; }
-  .pagination a.bl_pagination__link_number__active:focus, .pagination a.bl_pagination__link_number__active:active,
-  .pagination .active a.bl_pagination__link_number__active:focus,
-  .pagination .active a.bl_pagination__link_number__active:active {
+  .pagination span.bl_pagination__link_number__active:focus, .pagination span.bl_pagination__link_number__active:active,
+  .pagination .active span.bl_pagination__link_number__active:focus,
+  .pagination .active span.bl_pagination__link_number__active:active {
     background-color: #392b24;
     color: #fff; }
 
@@ -3236,8 +3250,8 @@ li.inf_product__item {
     text-align: center; }
 
 .bl_callBack__error {
-  min-height: 20px;
-  visibility: hidden; }
+  display: block;
+  min-height: 20px; }
 
 .bl_callBack__submit {
   margin: 5px 0;
@@ -3641,6 +3655,9 @@ li.inf_product__item {
   background-color: #548301;
   transition: all .3s; }
 
+.button_buyProduct {
+  background-color: #548301; }
+
 .button_buyProduct__corrected {
   float: right;
   margin-top: 18px; }
@@ -3676,6 +3693,87 @@ li.inf_product__item {
     height: 1px;
     width: 100%;
     background-color: #6fa401; }
+
+.popup_likeShopbag .shoppingBasket_product__name {
+  text-align: center; }
+
+.popup_likeShopbag {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  max-width: 628px;
+  min-height: 250px;
+  padding: 10px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #548301;
+  z-index: 1080; }
+
+.popup_likeShopbag__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  color: #548301;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 4; }
+
+.popup_likeShopbag__close:hover {
+  color: #f00; }
+
+.popup_likeShopbag {
+  border: 2px solid #548301;
+  padding: 0 20px 20px;
+  min-height: initial; }
+
+.popup_likeShopbag__text_main {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 3% auto 10px;
+  font-size: 24px; }
+
+.popup_likeShopbag__text {
+  margin: 5px; }
+
+.button_buyProduct {
+  background-color: #548301;
+  min-height: 30px; }
+
+.popup_likeShopbag__buttons {
+  width: 100%;
+  vertical-align: top;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.popup_likeShopbag__continueBuying,
+.popup_likeShopbag__goToShopbag {
+  width: 45%; }
+
+.button_buyProduct__text {
+  color: #fff; }
+
+.popup_likeShopbag__goToShopbag_text {
+  transition: 0.2s all; }
+
+.popup_likeShopbag__goToShopbag_text:hover {
+  color: #fff; }
+
+.shoppingBasket_product__name.popup_likeShopbag__text {
+  text-align: center; }
 
 /*********************************************/
 /*FOOTER*/
