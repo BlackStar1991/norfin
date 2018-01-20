@@ -1,7 +1,8 @@
 $(document).ready(function () {
 
 //MENU
-    var headerPage = $('.header');
+    var headerPage = $('.header'),
+        $window = $(window);
 
     $('.open-menu-min').on("click", function () {
         $(this).toggleClass('close-menu-min');
@@ -60,12 +61,21 @@ $(document).ready(function () {
         });
     }
 
+    /// scrollButton
+    function slideSubMenu(btn, fieldUnderBtn, displayView){
+        btn.each(function(){
+            $(this).on({
+                click: function (){
+                    if ($window.width() <= displayView) {
+                        fieldUnderBtn.slideToggle(400);
+                    }
+                }
+            });
+        });
+    }
 
-    // hideShowEffect($(".bl_currency__active"), $(".bl_currency__variables"));
-    // hideShowEffect($(".bl_currency__variables_item"), $(".bl_currency__variables"));
-    //
-    // hideShowEffect($(".bl_language__active"), $(".bl_language__variables"));
-    // hideShowEffect($(".bl_language__variables_item"), $(".bl_language__variables"));
+    slideSubMenu(buttonRubrics, fieldRubrics, 991);
+
 
 
 /// buttons must work only  $(window).width() <=991px
@@ -73,7 +83,7 @@ $(document).ready(function () {
 
         if ($(window).width() <= 991) {
 
-            sliderEffectForButtons(buttonRubrics, fieldRubrics, 600);
+
             sliderEffectForButtons(buttonCategories, fieldCategories, 600);
             sliderEffectForButtons(buttonInformation, fieldInformation, 600);
             sliderEffectForButtons(buttonContacts, fieldContacts, 600);
@@ -639,7 +649,7 @@ var fullNavigation = $(".bl_fullNavigation"),
 
 $(window).resize(function () {
 
-    var fieldRubrics = $(".bl_fullCategories__field"),
+    var
         fieldCategories = $(".bl_catalogProducts__full"),
 
         fieldInformation = $(".code_information__full"),
@@ -670,7 +680,7 @@ $(window).resize(function () {
 
 
     if (body.width() >= 992) {
-        fieldRubrics.css({"display": "block"});
+
         fieldCategories.css({"display": "block"});
         fieldInformation.css({"display": "block"});
         fieldContacts.css({"display": "block"});
@@ -684,7 +694,7 @@ $(window).resize(function () {
 
 
     } else {
-        fieldRubrics.css({"display": "none"});
+
         fieldCategories.css({"display": "none"});
         fieldInformation.css({"display": "none"});
         fieldContacts.css({"display": "none"});

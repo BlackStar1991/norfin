@@ -37,7 +37,7 @@
 
   &:hover,
   &:active,
-  &:focus{
+  &:focus {
     color: #fff;
     text-decoration: underline;
   }
@@ -246,7 +246,7 @@ $marginTopItem: 30px;
     font-size: 14px;
 
   }
-  &:hover{
+  &:hover {
     box-shadow: 0 0 10px 1px $color_green2;
   }
 
@@ -266,7 +266,6 @@ $marginTopItem: 30px;
   right: 0;
 
   display: block;
-
 
   background: none;
   border: none;
@@ -364,7 +363,7 @@ $marginTopItem2: 22px;
 
   &:hover,
   &:focus,
-  &:active{
+  &:active {
     color: #fff;
     text-decoration: underline;
   }
@@ -421,20 +420,21 @@ $marginTopItem2: 22px;
 
 .bl_fullCategories__field {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
 }
 
 .bl_fullCategories__item {
-  display: inline-block;
   height: 100%;
-  width: calc((100% / 7) - 6px);
   text-align: center;
+  padding-right: 42px;
+  border-right: 1px solid #fff;
 
-  &:first-child {
-    text-align: left;
-  }
-  &:last-child .bl_fullCategories__link {
-    text-align: right;
+  &:last-child{
     border-right: none;
+    padding-right: 0;
   }
 
 }
@@ -444,12 +444,11 @@ $marginTopItem2: 22px;
   height: 100%;
   width: 100%;
   color: white;
+  line-height: 50px;
   font-size: 18px;
 
-  line-height: 2;
-
   box-sizing: border-box;
-  border-right: 1px solid #fff;
+
 
   &:hover,
   &:focus {

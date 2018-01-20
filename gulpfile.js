@@ -7,9 +7,14 @@ var gulp = require("gulp"),                             // gulp core
     gulpif = require('gulp-if'),                        // conditionally run a task
     clean = require('gulp-clean'),                      // removing files and folders
     uglify = require('gulp-uglify'),                    // uglifies the js
+
+    concat = require('gulp-concat'),
     rename = require('gulp-rename'),                    // rename files
     useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
-    cleanCSS = require('gulp-clean-css'),               // minify the css files
+
+    csso = require('gulp-csso'),                        // minify the css files
+    cmq = require('gulp-combine-mq'),
+
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     browserSync = require('browser-sync').create(),     // inject code to all devices
     imagemin = require('gulp-imagemin'),                // minify images
@@ -58,6 +63,8 @@ gulp.task('sass', ['sprite'], function () {
             browsers: ['last 5 versions'],
             cascade: true
         }))
+        .pipe(cmq())
+        .pipe(csso())
         .pipe(gulp.dest('app/css'))                     // where to put the file
         .pipe(browserSync.stream());                    // browsersync stream
 });
@@ -67,8 +74,9 @@ gulp.task('sass', ['sprite'], function () {
 /*********************************************/
 
 gulp.task('js', function () {
-    return gulp.src('./app/js/**/*.js')                 // get the files
-        .pipe(browserSync.stream());                    // browsersync stream
+    return gulp.src('./app/js/*.js')                 // get the files
+        .pipe(browserSync.stream())
+                                   // browsersync stream
 });
 
 /*********************************************/
@@ -127,19 +135,6 @@ gulp.task('extrass', function () {
     ]).pipe(gulp.dest('dist'));                         // where to put the files
 });
 
-/*********************************************/
-/*CSS TASKS*/
-/*********************************************/
-
-gulp.task('minifyCss', function() {
-    return gulp.src('app/css/*.css')
-        .pipe(cleanCSS({compatibility: 'ie8'}))
-
-        .pipe(gulp.dest('dist/css/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/css/'));
-});
-
 
 /*********************************************/
 /*BUILD TASKS*/
@@ -155,14 +150,11 @@ gulp.task('build', ['clean'], function () {
     gulp.start('images');                               // images task
     gulp.start('fonts');                                // fonts task
     gulp.start('libs');                                 // libs task
-
     gulp.start('extrass');                              // extras task
-    gulp.start('minifyCss');
 
     return gulp.src('app/*.html')
-
-        .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', cleanCSS()))
+        .pipe(gulpif('app/*.js', uglify()))                 // uglify js-files
+        .pipe(gulpif('app/*.css', csso()))                // minify css-files
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
 });
@@ -183,3 +175,17 @@ function buildSprite() {
     spriteData.img.pipe(gulp.dest('./app/image'));
     return spriteData.css.pipe(gulp.dest('./app/sass/components'));
 }
+
+/*********************************************/
+/*MINIMIZATION JS*/
+/*********************************************/
+gulp.task('jsmin', function(){
+    gulp.src(['./app/js/*.js'])
+        .pipe(concat('common.js'))
+        .pipe(uglify())
+        .pipe(rename("./common-xmin.js"))
+        .pipe(gulp.dest('app/js'));
+});
+
+
+

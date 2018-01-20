@@ -98,8 +98,9 @@
     display: block;
     text-align: center;
     margin-top: 10px;
+    padding-right: 0;
     text-transform: uppercase;
-
+    border-right: none;
     border-bottom: 1px solid #fff;
 
     &:first-child {
@@ -299,6 +300,19 @@
     font-size: 20px;
   }
 
+
+  .bl_subcatalog__item{
+    width: 47.5%;
+    &:nth-of-type(3n+2){
+      margin-left:0;
+      margin-right:0;
+    }
+    &:nth-of-type(2n){
+      margin-left: 5%;
+    }
+  }
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -383,7 +397,13 @@
     padding: 10px 20px;
   }
 
+  .bl_subcatalog__item{
+    width: 100%;
 
+    &:nth-of-type(2n){
+      margin-left: 0;
+    }
+  }
 
 }
 
