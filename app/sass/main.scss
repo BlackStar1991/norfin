@@ -3012,7 +3012,8 @@ li.inf_product__item.inf_product__item_correctForTwo {
   top: 35%;
   width: 24px;
   height: 24px;
-  color: $color_grey2;
+  border-radius: 50%;
+  color: $color_green;
   font-size: 24px;
 
   &:before {
@@ -3164,7 +3165,8 @@ li.inf_product__item.inf_product__item_correctForTwo {
   color: #fff;
   line-height: 2;
 
-  &:hover {
+  &:hover,
+  &:focus{
     color: #fff;
   }
 
@@ -3246,6 +3248,10 @@ li.inf_product__item.inf_product__item_correctForTwo {
 .button_buyProduct {
   background-color: $color_green;
   min-height: 30px;
+  &:hover,
+  &:focus{
+    background-color: $color_green2;
+  }
 }
 
 .popup_likeShopbag__buttons {
@@ -3260,10 +3266,6 @@ li.inf_product__item.inf_product__item_correctForTwo {
 .popup_likeShopbag__continueBuying,
 .popup_likeShopbag__goToShopbag {
   width: 45%;
-}
-
-.button_buyProduct__text {
-  color: #fff;
 }
 
 .popup_likeShopbag__goToShopbag_text {

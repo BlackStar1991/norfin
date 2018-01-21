@@ -62,10 +62,10 @@ $(document).ready(function () {
     }
 
     /// scrollButton
-    function slideSubMenu(btn, fieldUnderBtn, displayView){
-        btn.each(function(){
+    function slideSubMenu(btn, fieldUnderBtn, displayView) {
+        btn.each(function () {
             $(this).on({
-                click: function (){
+                click: function () {
                     if ($window.width() <= displayView) {
                         fieldUnderBtn.slideToggle(400);
                     }
@@ -75,7 +75,6 @@ $(document).ready(function () {
     }
 
     slideSubMenu(buttonRubrics, fieldRubrics, 991);
-
 
 
 /// buttons must work only  $(window).width() <=991px
@@ -590,25 +589,52 @@ $(document).ready(function () {
     buttonCallBack.on("click", callBackPassed);
 
 
-////// Product quantity
+    ////// Product quantity
 
     var quantityProduct = $(".block_quantity__input"),
         plusProduct = $(".block_quantity__plus"),
         minusProduct = $(".block_quantity__minus");
 
     plusProduct.on("click", function () {
-        quantityProduct.val(Number(quantityProduct.val()) + 1);
+        var field = $(this).prev(".block_quantity__input");
+        field.val(Number(field.val()) + 1);
     });
 
     minusProduct.on("click", function () {
 
-        if (quantityProduct.val() > 1) {
-            quantityProduct.val(Number(quantityProduct.val()) - 1);
+        var field = $(this).next(".block_quantity__input");
+
+
+        if (field.val() > 1) {
+            field.val(Number(field.val()) - 1);
         }
         else {
-            quantityProduct.val(1);
+            field.val(1);
         }
     });
+
+    leaveOnlyNumber(quantityProduct);
+
+
+    function leaveOnlyNumber(inputField) {
+        inputField.on('keyup', function () {
+            var val = $(this).val();
+            var new_str = val.replace(/[^0-9]/gim, '');
+            $(this).val(new_str);
+        });
+
+        inputField.on('blur', function () {
+            var val = $(this).val();
+            var new_str = val.replace(/[^0-9]/gim, '');
+
+            if (val === "") {
+                new_str = 1;
+            }
+            $(this).val(new_str);
+        });
+    }
+
+    //////////////
 
 
 });
@@ -657,8 +683,6 @@ $(window).resize(function () {
         fieldAdress = $(".code_adress__full");
 
 
-    // var buttonsWorkRight = liveScopeOfButtons();      ///////////// Эта хрень не работает =(
-
 
     if (body.width() >= 1200) {
 
@@ -668,14 +692,9 @@ $(window).resize(function () {
         blockNavigation.removeClass(closeMenu);
     } else {
         fullNavigation.addClass(mobileNavigation);
-
-
         blockNavigation.addClass(menuMobile);
         blockNavigation.addClass(closeMenu);
-
         iconMenu.removeClass(iconMenu_close);
-
-
     }
 
 
