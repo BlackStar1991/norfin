@@ -204,11 +204,10 @@
 .bl_fullControlsMenu {
   width: 100%;
   background-color: #fff;
-
-  padding-bottom: 30px; ////////////
+  /// padding-bottom: 30px; ////////////
 }
 
-$marginTopItem: 30px;
+$marginTopItem: 10px;
 
 .bl_logo__link {
   display: block;
@@ -288,7 +287,7 @@ $marginTopItem: 30px;
 
 }
 
-$marginTopItem2: 22px;
+$marginTopItem2: 10px;
 
 .bl_phones {
   float: right;
@@ -414,6 +413,7 @@ $marginTopItem2: 22px;
 }
 
 .bl_fullCategories {
+  position: relative;
   width: 100%;
   background-color: $color_green;
 }
@@ -432,7 +432,12 @@ $marginTopItem2: 22px;
   padding-right: 42px;
   border-right: 1px solid #fff;
 
-  &:last-child{
+  &:first-child {
+    padding-right: 0;
+    border-right: none;
+  }
+
+  &:last-child {
     border-right: none;
     padding-right: 0;
   }
@@ -449,12 +454,134 @@ $marginTopItem2: 22px;
 
   box-sizing: border-box;
 
-
   &:hover,
   &:focus {
+    outline: none;
     color: white;
     text-decoration: underline;
   }
+}
+
+////// SUB NAVIGATION
+
+.btn_subMenu {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  background-color: #93BE4A;
+  vertical-align: bottom;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\f03a";
+    font-family: $FontAwesom;
+    font-size: 40px;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 2px 1px #a2e02f;
+  }
+
+}
+
+.bl_subNav__full {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 300px;
+  background-color: $colog_lightGren;
+  z-index: 10;
+}
+
+.bl_subNav {
+  position: relative;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 300px;
+  width: 100%;
+  max-width: 250px;
+  background-color: $color_salato;
+}
+
+.bl_subNav__item {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  padding-left: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: .2s all;
+
+  &:hover,
+  &:focus {
+    transition: .2s all;
+    background: $color_green;
+  }
+}
+
+.bl_subNav__children{
+  float: left;
+  width: calc(100% - 250px);
+  padding-top: 40px;
+}
+
+.bl_subNav__field {
+  display: none;
+  height: 100%;
+
+}
+
+.bl_subNav__field.active {
+  display: block;
+}
+
+.bl_subNav_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: #fff;
+}
+
+.btn_closeSubnav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #548301;
+  font-size: 24px;
+  line-height: 24px;
+  &:before {
+    content: "\f00d";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $FontAwesom;
+    font-size: 24px;
+    z-index: 2;
+  }
+  &:hover,
+  &:focus {
+    color: #f00;
+  }
+
 }
 
 /////// NATIVE

@@ -99,6 +99,26 @@ $(document).ready(function () {
     liveScopeOfButtons();
 
 
+    // topMenu SubCategories
+
+    var btnSubCategories   = $(".btn_subMenu"),
+        fieldSubCategories = $(".bl_subNav__full"),
+        btnCloseSubCatalog = $(".btn_closeSubnav");
+    var childSubItem = $(".bl_subNav__item"),
+        fieldForChild = $(".bl_subNav__field");
+
+
+    hideShowEffect(btnSubCategories, fieldSubCategories);
+    hideShowEffect(btnCloseSubCatalog, fieldSubCategories);
+    childSubItem.on("click", function(){
+        childSubItem.removeClass("active");
+        $(this).addClass("active");
+        var currentIndex = $(this).index();
+        fieldForChild.removeClass("active");
+        fieldForChild.eq(currentIndex).addClass("active");
+
+    });
+
     //// Main-slider
 
     $(".bl_mainSlider").owlCarousel({
