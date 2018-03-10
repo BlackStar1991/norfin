@@ -586,7 +586,7 @@ button {
   background-color: $color_brown;
 
   font-family: "Arial Narrow", Arial, sans-serif;
-
+  white-space: nowrap;
   font-size: 24px;
   font-weight: 400;
 
@@ -594,6 +594,7 @@ button {
   text-transform: uppercase;
 
   &_action {
+    left: 20%;
     background-color: #f7411c;
   }
   &_new {
@@ -639,7 +640,6 @@ button {
   font-weight: 400;
 
   overflow: hidden;
-  //white-space: pre-wrap;
   text-overflow: ellipsis;
 }
 
@@ -740,8 +740,6 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  //border: 1px solid $color_red;
-
   box-shadow: 2.5px 4.3px 9px rgba(1, 1, 1, 0.14);
 }
 
@@ -774,23 +772,8 @@ button {
 
 }
 
-//
-//.likeButton_icon-mark {
-//  &:after {
-//    content: "";
-//    position: absolute;
-//    top: 50%;
-//    left: 50%;
-//    transform: translate(-50%, -50%);
-//
-//    width: 34px;
-//    height: 40px;
-//    background: url("../image/quantity.svg") 50% 50% no-repeat;
-//  }
-//}
-
 .likeButton_text {
-  //width: 100%;
+
   margin-left: 7%; /////////////
   display: inline-block;
   color: #2d3950;
@@ -799,28 +782,6 @@ button {
   font-weight: 400;
   text-transform: uppercase;
 }
-
-//
-//
-//.bl_aboutShop {
-//  background-color: #fff;
-//  padding: 0 20px;
-//  min-height: 400px;
-//  margin-top: 30px;
-//  width: 100%;
-//}
-//
-//.bl_aboutShop__title {
-//  padding-top: 22px;
-//}
-//
-//.bl_aboutShop__fullBlock {
-//  width: 100%;
-//}
-//
-//.bl_aboutShop__paragraph {
-//  margin-top: 22px;
-//}
 
 //
 
@@ -844,85 +805,6 @@ button {
   color: #333;
   line-height: 24px;
 }
-
-//
-//
-//
-//
-//.bl_shopNews {
-//  margin-top: 36px;
-//  background-color: #fff;
-//  width: 100%;
-//  min-height: 400px;
-//  padding: 0 20px;
-//}
-//
-//.bl_shopNews__title {
-//  //padding-top:22px;
-//  line-height: 52px;
-//  text-align: center;
-//  text-transform: uppercase;
-//}
-//
-//.bl_shopNews__fullGroup {
-//  width: 100%;
-//  margin-top: 26px;
-//  border-top: 1px solid $color_lightGrey;
-//}
-//
-//.bl_shopNews__news {
-//  display: block;
-//  width: 100%;
-//  min-height: 30px;
-//
-//  color: $color_grey2;
-//  font-family: $Tahoma;
-//  font-size: 14px;
-//  font-weight: 400;
-//}
-//
-//.bl_shopNews__wrapperBlock {
-//  margin-top: 18px;
-//  line-height: 20px;
-//  width: 100%;
-//}
-//
-//.bl_shopNews__calendar {
-//  float: left;
-//  width: 14px;
-//  height: 14px;
-//  background: url("../image/calendar.svg") 50% 50% no-repeat;
-//}
-//
-//.bl_shopNews__data {
-//  float: left;
-//  margin-left: 8px;
-//
-//}
-//
-//.bl_shopNews__data_text {
-//
-//  color: $color_grey2;
-//  font-family: $Tahoma;
-//  font-size: 14px;
-//
-//  &:before {
-//    content: "/";
-//    color: inherit;
-//    padding: 0;
-//  }
-//  &:first-child:before {
-//    content: "";
-//  }
-//
-//}
-//
-//.bl_shopNews__moreInformation {
-//  float: right;
-//  color: $color_blue;
-//  font-size: 14px;
-//
-//}
 
 ///////////// CART PRODUCT
 
@@ -1952,7 +1834,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
   box-sizing: border-box;
 }
 
-.bl_filters__subList{
+.bl_filters__subList {
   padding-left: 10px;
 }
 
@@ -2057,10 +1939,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
 
 .bl_filters__item {
   position: relative;
-  padding-left: 15px;
   font-size: 16px;
-  line-height: 36px;
-  font-weight: 400;
   color: $color_grey2;
   cursor: pointer;
   &:hover {
@@ -2118,32 +1997,26 @@ li.inf_product__item.inf_product__item_correctForTwo {
   z-index: 4;
 }
 
-.decor_lickCheckbox {
-  position: relative;
+.decor_lickCheckbox:before {
+  content: "";
+  position: absolute;
 
-  &:before {
-    content: "";
-    position: absolute;
+  top: -1px;
+  left: -15px;
 
-    top: 0;
-    left: -15px;
-
-    width: 20px;
-    height: 20px;
-    border: 1px solid #efefef;
-    background-color: #fff;
-    z-index: 3;
-  }
-
+  width: 20px;
+  height: 20px;
+  border: 1px solid #efefef;
+  background-color: #fff;
+  z-index: 3;
 }
 
 .filter_text {
   position: relative;
   display: inline-block;
 
-  padding-left: 30px;
-
-  margin-left: 15px;
+  padding-left: 20px !important;
+  //margin-left: 15px;
   line-height: 17px; ////////
   color: #333;
   cursor: pointer;
@@ -2268,7 +2141,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
 
 .bl_numberOfItemShow__select {
 
-  width: 162px;
+  width: 68px;
   height: 25px;
   border: 1px solid #e5e5e5;
   text-indent: 10px;
@@ -2335,7 +2208,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
 }
 
 .bl_catalog__fullProducts,
-.bl_subcatalog{
+.bl_subcatalog {
   width: 100%;
   height: 100%;
   margin-top: 23px; // должно совпадать с отступом левого блока по верхнему
@@ -2355,7 +2228,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
 }
 
 .view_grid__STYLE .bl_fullProducts__item {
-  min-height: 440px;
+  min-height: 477px;
   max-width: 31.8%;
   background-color: #fff;
   &:hover {
@@ -2365,10 +2238,12 @@ li.inf_product__item.inf_product__item_correctForTwo {
   }
 }
 
-
 .bl_fullProducts__characteristics {
+
+  display: none;
+
   position: absolute;
-  display: inline-block;
+
   top: 100%;
   left: -1px;
   width: calc(100% + 2px);
@@ -2382,9 +2257,9 @@ li.inf_product__item.inf_product__item_correctForTwo {
   border-top-style: none;
 }
 
-
-
-
+.view_grid__STYLE .bl_fullProducts__item:hover .bl_fullProducts__characteristics {
+  display: inline-block;
+}
 
 .bl_products {
   margin-top: 20px;
@@ -2400,10 +2275,10 @@ li.inf_product__item.inf_product__item_correctForTwo {
   position: relative;
 
   height: 100%;
-  min-height: 380px; ///////////////
+  min-height: 382px; ///////////////
 
-  padding: 16px 20px 23px 20px;
-
+  padding: 16px 0 0;
+  margin: 0 0 10px 1%;
   box-sizing: border-box;
 
 }
@@ -2428,8 +2303,8 @@ li.inf_product__item.inf_product__item_correctForTwo {
 
 .bl_fullProducts__title {
 
-  margin-top: 34px;
-  height: 44px;
+  margin-top: 18px;
+  min-height: 68px;
 
   text-align: center;
   color: $color_grey2;
@@ -2536,12 +2411,6 @@ li.inf_product__item.inf_product__item_correctForTwo {
   border: none;
   box-shadow: none;
 }
-
-
-
-
-
-
 
 // PAGINATION
 
@@ -3215,7 +3084,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
   line-height: 2;
 
   &:hover,
-  &:focus{
+  &:focus {
     color: #fff;
   }
 
@@ -3298,7 +3167,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
   background-color: $color_green;
   min-height: 30px;
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $color_green2;
   }
 }
@@ -3331,7 +3200,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
 
 //////////////// SUBCATALOG
 
-.bl_subcatalog__title{
+.bl_subcatalog__title {
   margin-top: 5px;
   margin-bottom: 10px;
   font-family: $TahomaBold;
@@ -3339,23 +3208,24 @@ li.inf_product__item.inf_product__item_correctForTwo {
   font-size: 24px;
   line-height: 36px;
 }
-.bl_subcatalog__full{
+
+.bl_subcatalog__full {
   position: relative;
   width: 100%;
-  
+
 }
 
-.bl_subcatalog__item{
+.bl_subcatalog__item {
   float: left;
   width: 30%;
   margin-bottom: 20px;
-  &:nth-of-type(3n+2){
+  &:nth-of-type(3n+2) {
     margin-left: 4.5%;
     margin-right: 4.5%;
   }
 }
 
-.bl_subCategories__link{
+.bl_subCategories__link {
   display: block;
   width: 100%;
   height: 100%;
@@ -3364,26 +3234,25 @@ li.inf_product__item.inf_product__item_correctForTwo {
   border: 1px solid #fff;
 
   &:hover,
-  &:focus{
+  &:focus {
     transition: .2s all;
     border-color: $color_green;
-    
-    .bl_subCategories__text{
+
+    .bl_subCategories__text {
       transition: .2s all;
       color: #f00;
     }
   }
 }
 
-
-
-.bl_subCategories__image{
+.bl_subCategories__image {
   display: block;
   width: 100%;
   height: 100%;
+  min-height: 150px;
 }
 
-.bl_subCategories__text{
+.bl_subCategories__text {
   margin-top: 10px;
   margin-bottom: 10px;
   color: $color_green;
@@ -3393,9 +3262,6 @@ li.inf_product__item.inf_product__item_correctForTwo {
   text-decoration: underline;
   text-align: center;
 }
-
-
-
 
 /*********************************************/
 /*FOOTER*/

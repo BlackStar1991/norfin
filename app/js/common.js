@@ -103,8 +103,8 @@ $(document).ready(function () {
 
     var btnSubCategories   = $(".btn_subMenu"),
         fieldSubCategories = $(".bl_subNav__full"),
-        btnCloseSubCatalog = $(".btn_closeSubnav");
-    var childSubItem = $(".bl_subNav__item"),
+        btnCloseSubCatalog = $(".btn_closeSubnav"),
+        childSubItem = $(".bl_subNav__item"),
         fieldForChild = $(".bl_subNav__field");
 
 
