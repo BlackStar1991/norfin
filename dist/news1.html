@@ -26,23 +26,8 @@
     <!-- @formatter:on -->
 
 
-    <!-- build:css css/libs.min.css -->
-    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.css">
-
-    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap-theme.min.css">
-
-    <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.min.css">
-
-    <link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.min.css">
-
-
-    <!-- endbuild -->
-    <!-- build:css css/main.min.css -->
-
-
-    <link rel="stylesheet" href="css/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
@@ -146,7 +131,7 @@
             <div class="container">
                 <div class="col-xs-12 correct_left correct_right">
                     <button class="open-menu-main  hidden-md hidden-lg" type="button">Рубрики</button>
-                    <ul class="bl_fullCategories__field ">
+                    <ul class="bl_fullCategories__field ">                        
                         <li class="bl_fullCategories__item"><a href="#"
                                                                class="bl_fullCategories__link">Зимняя одежда</a></li>
                         <li class="bl_fullCategories__item"><a href="#"
@@ -250,12 +235,41 @@
 
         <div class="container correct_left correct_left block_white">
 
-            <div class="col-xs-12">
+
+            <div class="col-xs-12 col-md-3">
+
+               <nav class="nav_blog__full">
+                   <ul class="nav_blog">
+                       <li class="nav_blog__item"><a class="nav_blog__link" href="#">Новости</a></li>
+                       <li class="nav_blog__item"><a class="nav_blog__link" href="#">Статьи</a></li>
+                   </ul>
+               </nav>
+
+                <div class="blog_search">
+                        <form class="blog_search__wrapper" method="get" action="">
+                            <input class="blog_search__field" type="text" name="search" placeholder="Поиск записей">
+                            <button class="blog_search__button" type="submit">Поиск</button>
+                        </form>
+                </div>
 
 
-                
+                <div class="blog_newRecords">
+                    <p class="blog_newRecords__title">Свежие записи</p>
+                    <ul class="blog_newRecords__fullList">
+                        <li class="blog_newRecords__item">
+                            <a href="" class="blog_newRecords__link">График работы магазина 8го марта</a>
+                        </li>
+                        <li class="blog_newRecords__item">
+                            <a href="" class="blog_newRecords__link">График работы магазина в новогодние праздники</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-md-9">
                 <article class="bl_article clearfix">
-                    <h1 class="bl_article__title">Мы получили новую одежду</h1>
+                    <h2 class="bl_article__title">Мы получили новую одежду</h2>
                     <div class="bl_socbuttons__fullButton">
                         <a class="bl_socbuttons__button bl_socbuttons__like" href="#">
                             <span class="bl_socbuttons__like_btn"></span>
@@ -276,41 +290,68 @@
                         <img class="bl_topic__img" src="image/news/picture.jpg" alt="">
 
                         <div class="bl_topic__about clearfix">
-                            <div class="col-xs-12">
+                            <div class="col-xs-3">
+                                <div class="bl_topic__author">
+                                    <p class="bl_topic__string"><span class="bl_topic__circle_btn bl_topic__time_btn"></span><time class="bl_topic__text">3 марта 2018</time></p>
+                                    <p class="bl_topic__string"><span class="bl_topic__circle_btn bl_topic__user_btn"></span><span class="bl_topic__text">norfin</span></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-9">
                                 <div class="bl_topic__description">
 
-                                    <p>Дорогие покупатели! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eligendi enim et harum necessitatibus neque, nulla numquam quia tenetur ullam? Animi aperiam architecto debitis eos quidem! Amet consequatur doloribus eligendi eum id perspiciatis placeat provident quibusdam sit? Aspernatur autem dignissimos inventore maiores minus necessitatibus neque perspiciatis quaerat, quam quasi sequi.</p>
-                                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad cupiditate
-                                        dolorem et eum ex expedita fuga illum maiores minima nesciunt, quaerat quam
-                                        recusandae saepe sapiente sit ullam veritatis voluptas.
-                                    </div>
-                                    <div>Ad autem doloribus ea iusto quasi! A asperiores at ducimus facere magnam saepe,
-                                        sunt. At consectetur culpa dolorem doloribus et fugiat magnam nostrum quasi
-                                        recusandae repellendus? Consectetur ipsam iste quod!
-                                    </div>
-                                    <div>Iste libero maxime officiis quo voluptatum! Architecto atque earum nam,
-                                        quisquam sint ut. Ad doloribus facilis fugit ipsa natus nostrum perferendis quam
-                                        quia quibusdam, ratione rerum sed tenetur totam vitae?
-                                    </div>
-                                    <div>Accusantium, alias asperiores consequatur deleniti distinctio, enim itaque
-                                        minus provident rem repudiandae sapiente sint vitae, voluptas. Adipisci
-                                        blanditiis culpa ea error esse illo necessitatibus neque perferendis quod
-                                        voluptate? Quo, reprehenderit?
-                                    </div>
-                                    <div>Ad architecto atque debitis eius error est eum explicabo fugiat id illum in
-                                        laboriosam maxime minus modi nam non obcaecati pariatur placeat quam qui quidem,
-                                        quisquam soluta sunt, voluptate voluptates.
-                                    </div>
+                                    <p>Дорогие покупатели!
 
-                                    <ul>
-                                        <li>item</li>
-                                        <li>item</li>
-                                        <li>item</li>
-                                        <li>item</li>
-                                        <li>item</li>
-                                        <li>item</li>
-                                    </ul>
+                                        8-го марта магазин будет работать за сокращенным графиком:
 
+                                        с 10:00-17:00
+                                        ...</p>
+                                    <a class="bl_topic__description_button" href="">Подробнее &gt;&gt;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="bl_article clearfix">
+                    <h2 class="bl_article__title">Одеваемся стильно, модно, молодежно</h2>
+                    <div class="bl_socbuttons__fullButton">
+                        <a class="bl_socbuttons__button bl_socbuttons__like" href="#">
+                            <span class="bl_socbuttons__like_btn"></span>
+                            <span class="bl_socbuttons__like_currentNumber">0</span>
+                        </a>
+                        <a class="bl_socbuttons__button bl_socbuttons__facebook" href="#"></a>
+
+                        <a class="bl_socbuttons__button bl_socbuttons__twitter" href="#"></a>
+
+                        <a class="bl_socbuttons__button bl_socbuttons__google" href="#">
+                            <button class="bl_socbuttons__google_btn"></button>
+                            <span class="bl_socbuttons__google_currentNumber decor_triangle__socButton">0</span>
+                        </a>
+                    </div>
+
+                    <div class="bl_topic">
+
+                        <img class="bl_topic__img" src="image/news/picture2.jpg" alt="">
+
+                        <div class="bl_topic__about clearfix">
+                            <div class="col-xs-3">
+                                <div class="bl_topic__author">
+                                    <p class="bl_topic__string"><span class="bl_topic__circle_btn bl_topic__time_btn"></span><time class="bl_topic__text">3 марта 2018</time></p>
+                                    <p class="bl_topic__string"><span class="bl_topic__circle_btn bl_topic__user_btn"></span><span class="bl_topic__text">norfin</span></p>
+                                </div>
+                            </div>
+                            <div class="col-xs-9">
+                                <div class="bl_topic__description">
+
+                                    <p>
+
+                                        Дорогие покупатели!
+
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ut.
+
+                                    </p>
+                                    <a class="bl_topic__description_button" href="">Подробнее &gt;&gt;</a>
                                 </div>
                             </div>
                         </div>
@@ -321,9 +362,100 @@
 
 
 
+
+                    <div class="bl_pagination">
+                        <ul class="pagination bl_pagination__fullItems">
+                            <li class="bl_pagination__item"><a href="#"
+                                                               class="bl_pagination__link bl_pagination__link_number bl_pagination__link_number__active">1</a>
+                            </li>
+                            <li class="bl_pagination__item"><a href="#"
+                                                               class="bl_pagination__link bl_pagination__link_number bl_pagination__decorLine">2</a>
+                            </li>
+                            <li class="bl_pagination__item"><a href="#"
+                                                               class="bl_pagination__link bl_pagination__link_number bl_pagination__decorLine ">3</a>
+                            </li>
+                            <li class="bl_pagination__item"><a href="#"
+                                                               class="bl_pagination__link bl_pagination__arrow bl_pagination__decorLine"> &gt; </a>
+                            </li>
+                            <li class="bl_pagination__item"><a href="#"
+                                                               class="bl_pagination__link bl_pagination__lastPage ">Последняя >></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
             </div>
+
         </div>
 
+
+
+
+        <!-- CEO Если надо -->
+
+        <div class="container correct_left correct_right ">
+            <div class="col-xs-12 correct_left correct_right">
+                <article class="catalog_article">
+                    <h2 class="catalog_article__title">Рюкзаки Norfin</h2>
+                    <p class="catalog_article__paragraf">
+                        Отыскать подходящий рюкзак порой не просто,но и не так трудно,если знать на что обратить своё
+                        внимание.Norfin предлагает рюкзаки с подвесными системами для разных сфер применения и для
+                        разных
+                        особенностей фигур покупателей.Назначение подвесной системы рюкзака-обеспечить максимальное
+                        удобство
+                        при переноске тяжестей путём подгонки спинки рюкзака под рост и фигуру,фиксации
+                        грузов,вентиляции
+                        спины.
+                        На ваш выбор представлены рюкзаки разных объёмов с широким диапазоном назначения
+                        использования.Каждый покупатель найдёт для себя подходящую модель.
+                    </p>
+                    <p class="catalog_article__paragraf">
+                        Продукцию Прибалтийской фирмы Norfin можно приобрести на всей территории Евросоюза. В Украине
+                        оригинальные товары бренда можно приобрести в крупных специализированных и интернет-магазинах.
+                        Summer collection — летняя коллекция включает в себя восемь полноценных костюмов. Разгрузочные и
+                        спасательные жилеты, дождевики, футболки, рубашки, брюки, бейсболки, шапки, вейдерсы и забродные
+                        ботинки. Winter collection - зимний ассортимент утепленной одежды и обуви состоит из семнадцати
+                        костюмов множества термобелья для теплой, холодной и очень холодной погоды. Коллекция HUNTING
+                        это
+                        специализированные модели для охотников, объединяющая в себе весь спектр: от носков и перчаток
+                        до
+                        нешуршащих костюмов. TOURISM-широкий выбор туристической мебели: столы, стулья, кресла, палатки
+                        и
+                        многое другое.
+                    </p>
+                    <p class="catalog_article__paragraf">
+                        Почти все костюмы, производимые под маркой Norfin, изготовлены из мембранных «дышащих» и
+                        многослойных материалов. Первый слой защищает от дождя, снега и ветра. Этот материал очень
+                        важен.
+                        Он должен не пропускать молекулы воды и в тоже время хорошо выводить испарение, исходящее от
+                        вашего
+                        тела. В противном случае вы промокните изнутри. Всем знакомо ощущение мокрых ног в резиновых
+                        сапогах. Но резина ведь не промокает. Поэтому мембраны от Norfin обязательное условие
+                        современного
+                        костюма для активного отдыха. Костюм можно «усовершенствовать» с помощью термобелья или флиса.
+                        Флис
+                        кстати еще называют искусственная шерсть. Но в отличие от шерсти флисовый материал не впитывает
+                        воду, а это значит, что тело не соприкасается с водой и как следствие не мерзнет. Зимнюю обувь
+                        Norfin желательно использовать с термоносками.
+                    </p>
+                    <p class="catalog_article__paragraf">
+                        За многолетнюю историю существования марки Norfin огромная армия поклонников активного отдыха на
+                        природе, рыболовов, охотников и просто людей, ведущих активный образ жизни, высоко оценили
+                        множество
+                        достоинств летней и зимней одежды, произведенной под контролем качества и с соблюдением всех
+                        мировых
+                        стандартов производства самой совершенной и удобной одежды.
+
+                    </p>
+
+                </article>
+            </div>
+        </div>
+      <!--  end CEO  -->
+
+
+
+        
     </div>
 </main>
 
@@ -423,21 +555,8 @@
 
 <script src="libs/jquery.min.js"></script>
 
-<!-- build:js js/libs.min.js -->
-
-<script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
-
-<script src="bower/fancybox/dist/jquery.fancybox.min.js"></script>
-<script src="bower/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
-
-
-<!-- endbuild -->
-<!-- build:js js/common.min.js -->
-
-
-<script src="js/common.js"></script>
-<!-- endbuild -->
+<script src="js/libs.min.js"></script>
+<script src="js/common.min.js"></script>
 
 
 </body>
