@@ -86,8 +86,6 @@
 
   .bl_shoppingCart {
     width: 50%;
-    //float: left;
-    margin-top: 30px;
   }
 
   .rubric__title_text {
@@ -165,9 +163,9 @@
     font-size: 16px;
   }
 
-  .decor_leftTriangle {
-    width: 100%;
-  }
+  //.decor_leftTriangle {
+  //  width: 100%;
+  //}
 
   .bl_filters__productsFilters .decor_leftTriangle:after {
     left: 50%;
@@ -324,6 +322,14 @@
 
   }
 
+  .bl_shoppingCart{
+    width: auto;
+    margin-top: 8px;
+    float: none;
+    text-align: center;
+  }
+
+
   .inf_product__tabs .inf_product__item.active a {
     border-top: none;
     background-color: $color_green;
@@ -437,22 +443,22 @@
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
 
-  .bl_phones {
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
+  //.bl_phones {
+  //  float: none;
+  //  margin: 0 auto;
+  //  text-align: center;
+  //  width: 100%;
+  //}
+  //
+  //.bl_phones__text {
+  //  display: inline;
+  //  text-align: center;
+  //}
 
-  .bl_phones__text {
-    display: inline;
-    text-align: center;
-  }
-
-  .bl_shoppingCart {
-    float: none;
-    margin: 30px auto 0;
-  }
+  //.bl_shoppingCart {
+  //  float: none;
+  //
+  //}
 
   .icon_calling:before {
     left: -24px;
