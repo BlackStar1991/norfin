@@ -109,7 +109,7 @@ $(document).ready(function () {
 
 
     hideShowEffect(btnSubCategories, fieldSubCategories);
-    hideShowEffect(btnCloseSubCatalog, fieldSubCategories);
+
     childSubItem.on("click", function(){
         childSubItem.removeClass("active");
         $(this).addClass("active");

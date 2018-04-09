@@ -177,3 +177,155 @@
 
   background-size: cover;
 }
+
+
+/* + Снежинки + */
+
+.common-home .mainSlider__fullBlock:before {
+  content: "";
+  position: absolute;
+  height: 411px;
+  background-size: cover;
+  z-index: -1;
+  top: 0;
+  left: -304px;
+  background: url(../image/snowflake-4.png) 50% 50% no-repeat;
+  width: 399px;
+}
+
+.common-home .mainSlider__fullBlock:after {
+  content: "";
+  position: absolute;
+  height: 625px;
+  background-size: cover;
+  z-index: -1;
+  width: 676px;
+  top: 402px;
+  right: -47%;
+  background: url(../image/snowflake-2.png) 50% 50% no-repeat;
+}
+
+.common-home .bl_popular:before {
+  content: "";
+  position: absolute;
+  height: 411px;
+  background-size: cover;
+  z-index: -1;
+  top: -187px;
+  left: -412px;
+  background: url(../image/snowflake-3.png) 50% 50% no-repeat;
+  width: 554px;
+}
+
+.common-home .bl_popular:after {
+  content: "";
+  position: absolute;
+  height: 808px;
+  background-size: cover;
+  z-index: -1;
+  width: 276px;
+  top: 188px;
+  right: -20%;
+  background: url(../image/snowflake-5.png) 50% 50% no-repeat;
+}
+
+.common-home .bl_aboutShop:before {
+  content: "";
+  position: absolute;
+  height: 700px;
+  background-size: cover;
+  z-index: -1;
+  top: -270px;
+  left: -494px;
+  background: url(../image/snowflake-1.png) 50% 50% no-repeat;
+  width: 744px;
+}
+
+//.common-home .decor_snowflake1:after,
+//.common-home .decor_snowflake1:before {
+//  display: none;
+//}
+
+/* - Снежинки - */
+
+.table-short {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-short>tbody>tr>td {
+  padding: 2px;
+  border-top: 1px dotted #f1f1f1;
+  border-bottom: 1px dotted #f1f1f1;
+}
+
+.empty_bl_description{
+  height: 20px;
+}
+
+.form-control[readonly] {
+  background-color: #FFF;
+}
+
+
+/* + Advantages in Cart Product + */
+.prior-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%
+}
+
+.prior-list__item {
+  width: 33.33%
+}
+
+.prior-list__item:nth-child(-n+3) {
+  padding-bottom: 18px
+}
+
+.prior-item .prior-item__ico {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  border: 2px solid #699900;
+  box-shadow: 0 0 0 5px #e8edf1;
+  border-radius: 50%;
+  font-size: 30px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition-duration: .3s;
+  transition-property: transform;
+  background-color: #fff;
+  background-size: cover;
+}
+
+.prior-item .prior-item__ico:hover {
+  transform: scale(1.1)
+}
+
+.prior-item__img {
+  max-width: 70%;
+  display: block
+}
+
+.prior-item__title {
+  text-align: center;
+  font-size: 11px;
+  display: block
+}
+
+/* - Advantages in Cart Product - */
+
