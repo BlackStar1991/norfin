@@ -4,15 +4,36 @@ $(document).ready(function () {
     var headerPage = $('.header'),
         $window = $(window);
 
-    $('.open-menu-min').on("click", function () {
-        $(this).toggleClass('close-menu-min');
-        $(".bl_nav__mobile").toggleClass('closeMenu');
-
-    });
+    // $('.open-menu-min').on("click", function () {
+    //     $(this).toggleClass('close-menu-min');
+    //     $(".bl_nav__mobile").toggleClass('closeMenu');
+    //
+    // });
 
 
     var buttonRubrics = $(".open-menu-main"),
+        btnCategoriesMob = $(".btn_categories"),
+        activeClassMobCategories = "js-addedFooterInfoBlock",
+        fullFieldForCategories = $(".bl_fullCategories__wrapper"),
         fieldRubrics = $(".bl_fullCategories__field");
+
+    buttonRubrics.on("click", function () {
+
+        fullFieldForCategories.slideToggle(500);
+
+        if ($(".js-addedFooterInfoBlock").length === 0){
+            var linksInforfomationFromFooter = $(".footer_fullPages__link").clone(true);
+            linksInforfomationFromFooter.appendTo(fullFieldForCategories);
+        }
+        fullFieldForCategories.addClass(activeClassMobCategories);
+// Клонируем ссылки информации из футора в Блок оббертку, единожды, пока нету класса
+    });
+
+    btnCategoriesMob.on("click", function () {
+        $(this).toggleClass("active");
+        fieldRubrics.slideToggle(600);
+    });
+
 
 
     var buttonCategories = $(".bl_catalogProducts__title"),
@@ -43,13 +64,9 @@ $(document).ready(function () {
 
 //   sliderEffect
     function sliderEffectForButtons(button, element, duration) {
-
-        // return function () {
         button.click(function () {
             element.slideToggle(duration);
         });
-        // }(button, element, duration);
-
     }
 
 
@@ -73,9 +90,6 @@ $(document).ready(function () {
             });
         });
     }
-
-    slideSubMenu(buttonRubrics, fieldRubrics, 991);
-
 
 /// buttons must work only  $(window).width() <=991px
     function liveScopeOfButtons() {

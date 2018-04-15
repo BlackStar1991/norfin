@@ -209,6 +209,8 @@
 .bl_fullControlsMenu {
   width: 100%;
   background-color: #fff;
+  border-bottom: 3px solid $color_green;
+  box-sizing: border-box;
   /// padding-bottom: 30px; ////////////
 }
 
@@ -625,33 +627,8 @@ $marginTopItem2: 10px;
 }
 
 ////// SUB NAVIGATION
-//
-//.btn_subMenu {
-//  position: relative;
-//  display: inline-block;
-//  width: 50px;
-//  height: 50px;
-//  box-sizing: border-box;
-//  outline: none;
-//  color: #fff;
-//  background-color: #93BE4A;
-//  vertical-align: bottom;
-//
-//  &:after {
-//    position: absolute;
-//    top: 50%;
-//    left: 50%;
-//    transform: translate(-50%, -50%);
-//    content: "\f03a";
-//    font-family: $FontAwesom;
-//    font-size: 40px;
-//  }
-//  &:hover,
-//  &:focus {
-//    box-shadow: 0 0 2px 1px #a2e02f;
-//  }
-//
-//}
+
+
 
 .bl_subNav__full {
   position: absolute;
@@ -659,8 +636,15 @@ $marginTopItem2: 10px;
   left: 0;
   width: 100%;
   min-height: 300px;
-  background-color: $colog_lightGren;
+  background-color: #e5e5e5;
+  border: 1px solid $color_green;
+  border-top-color: #fff;
   z-index: 10;
+}
+
+.bl_subNav__name{
+  min-height: 56px;
+  color: $color_green;
 }
 
 .bl_subNav__img{
@@ -724,10 +708,11 @@ $marginTopItem2: 10px;
 
 }
 
+
 .bl_subNav_wrapper li{
   width: calc(100% / 6);
   text-align: center;
-  padding: 3% 0;
+  padding: 1% 0;
 }
 
 
@@ -830,16 +815,67 @@ $marginTopItem2: 10px;
 }
 
 .open-menu-main {
+  position: relative;
   display: block;
-  margin: 10px auto;
-  height: 30px;
+  margin: 10px 0;
+  height: 40px;
   width: 150px;
   align-items: center;
   color: #fff;
   border: 1px solid #fff;
   background-color: inherit;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 26px;
+  text-align: right;
+  padding-right: 14px;
 }
 
+.open-menu-main:before{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  line-height: 40px;
+  content: "\f0c9";
+  font-family: $FontAwesom;
+  color: inherit;
+}
+
+.bl_fullCategories__wrapper{
+  position: relative;
+  width: 100%;
+}
+
+
+.bl_fullCategories__wrapper .footer_fullPages__link{
+  margin: 12px 0;
+}
+
+.btn_categories{
+  position: relative;
+  font-size: 26px;
+  padding-left: 32px;
+  padding-right: 5px;
+  background: none;
+  color: #fff;
+  display: block;
+}
+.btn_categories:before{
+  content:'\f0da';
+  position: absolute;
+  top: 2px;
+  left:12px;
+  font-family: $FontAwesom;
+  font-size: inherit;
+  color: inherit;
+  transform: rotate(0);
+  transition: .2s all ease-in;
+  transform-origin: 50% 50%;
+}
+.btn_categories.active:before{
+  transform: rotate(90deg);
+  transition: .2s all ease-in;
+}
 
