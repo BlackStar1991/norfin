@@ -626,6 +626,12 @@ $marginTopItem2: 10px;
   }
 }
 
+.bl_fullCategories__item.active .bl_fullCategories__link{
+  background-color: $color_green2;
+  text-decoration: underline;
+}
+
+
 ////// SUB NAVIGATION
 
 
@@ -642,9 +648,18 @@ $marginTopItem2: 10px;
   z-index: 10;
 }
 
+.bl_subNav__link{
+  display: block;
+}
+
 .bl_subNav__name{
   min-height: 56px;
   color: $color_green;
+  &:hover,
+  &:focus{
+    color: $color_green;
+    text-decoration: underline;
+  }
 }
 
 .bl_subNav__img{
@@ -716,14 +731,14 @@ $marginTopItem2: 10px;
 }
 
 
-.bl_subNav_wrapper a{
-  font-size: 20px;
-  color: #fff;
-  &:hover,
-  &:focus{
-    text-decoration: underline;
-  }
-}
+//.bl_subNav_wrapper a{
+//  font-size: 20px;
+//  color: #fff;
+//  &:hover,
+//  &:focus{
+//    text-decoration: underline;
+//  }
+//}
 
 
 .btn_closeSubnav {
