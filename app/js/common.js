@@ -112,26 +112,43 @@ $(document).ready(function () {
 
     liveScopeOfButtons();
 
-
     // topMenu SubCategories
 
-    var btnSubCategories   = $(".btn_subMenu"),
+    var
         fieldSubCategories = $(".bl_subNav__full"),
+        navItem = $(".js-navItem"),
         btnCloseSubCatalog = $(".btn_closeSubnav"),
-        childSubItem = $(".bl_subNav__item"),
         fieldForChild = $(".bl_subNav__field");
 
+    hideShowEffect(btnCloseSubCatalog, fieldSubCategories);
 
-    hideShowEffect(btnSubCategories, fieldSubCategories);
+    navItem.hover(
+        function () {
+            navItem.removeClass(active);
+            $(this).addClass(active);
 
-    childSubItem.on("click", function(){
-        childSubItem.removeClass("active");
-        $(this).addClass("active");
-        var currentIndex = $(this).index();
-        fieldForChild.removeClass("active");
-        fieldForChild.eq(currentIndex).addClass("active");
+            fieldSubCategories.removeClass("hidden");
+            fieldForChild.removeClass(active);
+            var currentIndex = $(this).index();
+            fieldForChild.eq(currentIndex).addClass(active);
+        },
+        function () {
+            $(body).click(function () {
+                fieldSubCategories.addClass("hidden");
+            });
+        });
 
-    });
+
+    fieldSubCategories.hover(
+        function (){
+
+        },
+        function (){
+            setTimeout(function () {
+                fieldSubCategories.addClass("hidden");
+            }, 2000);
+        });
+
 
     //// Main-slider
 
