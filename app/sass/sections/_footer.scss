@@ -36,8 +36,7 @@
 
 .footer_fullPages{
   margin-top: 33px;
-
-  margin-bottom: 36px;
+  margin-bottom: 20px;
 
   &__item{
     width: 100%;
@@ -58,6 +57,43 @@
 
   }
 }
+// Soc Buttons
+
+
+.bl_soc__fullSocButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.bl_soc{
+  width: 50px;
+  height: 50px;
+
+  &__facebook{
+    @include sprite($fb);
+  }
+  &__google{
+    @include sprite($google);
+  }
+  &__youtube{
+    @include sprite($youtube);
+  }
+
+  &__instagram{
+    @include sprite($instagram);
+  }
+}
+
+.bl_soc__fullSocButtons a:hover {
+  opacity: 0.8;
+}
+
+
+//
 
 .footer_fullPages__workTime{
   color: #fff;

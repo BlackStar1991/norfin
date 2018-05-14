@@ -76,7 +76,7 @@ body {
   position: relative;
   flex: 1 0 auto;
 
-  overflow: hidden; ///////////////////////
+  //overflow: hidden; ///////////////////////
 }
 
 .decor_snowflake1 {
@@ -2244,6 +2244,9 @@ li.inf_product__item.inf_product__item_correctForTwo {
   width: 100%;
   min-height: 472px;
   border: 1px solid #ddd;
+
+  margin-bottom: 10px;
+
   &:hover {
     border-color: $color_green;
     height: auto !important;
