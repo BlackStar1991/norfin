@@ -111,15 +111,10 @@
     text-transform: uppercase;
     border-right: none;
     border-bottom: 1px solid #fff;
+  }
 
-    //&:first-child {
-    //  text-align: center;
-    //  border-left: none;
-    //}
-    //
-    //&:last-child .bl_fullCategories__link {
-    //  text-align: center;
-    //}
+  .bl_fullCategories__link:focus, .bl_fullCategories__link:hover{
+    background: none;
   }
 
 
@@ -424,6 +419,12 @@
     margin: 5px auto;
   }
 
+
+  .bl_catalog__fullProducts{
+    margin-top: 0;
+  }
+
+
   .bl_fullProducts__normal,
   .bl_fullProducts__newPrice {
     font-size: 20px;
@@ -432,6 +433,12 @@
     font-size: 14px;
   }
 
+  .decor_snowflake1:after, .decor_snowflake1:before{
+    height: auto;
+  }
+  .bl_view{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {

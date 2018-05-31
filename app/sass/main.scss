@@ -212,6 +212,7 @@ button {
   position: relative;
   margin-top: 23px;
   width: 100%;
+  min-height: 150px;
 }
 
 .bl_mainSlider__item {
@@ -1782,24 +1783,7 @@ li.inf_product__item.inf_product__item_correctForTwo {
   color: #fff;
 }
 
-//.rubric__title_button__categories {
-//  &:after {
-//    position: absolute;
-//    width: 100%;
-//    height: 100%;
-//    top: 35%;
-//    left: 50%;
-//    transform: translate(-50%, -50%);
-//
-//    font-size: 36px;
-//    content: "\f0c9";
-//    font-family: $FontAwesom;
-//    background: none;
-//
-//  }
-//}
-
-.rubric__title_button__filters {
+.rubric__title_button {
   &:after {
     content: "\f0b0";
     font-family: $FontAwesom;
