@@ -439,6 +439,22 @@
   .bl_view{
     display: none;
   }
+
+  #ocfilter-content .ocfilter-option{
+    display: none;
+  }
+
+  #option-30016{
+    display: block !important;
+  }
+
+  #option-30022{
+    display: block !important;
+  }
+
+
+
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -547,3 +563,50 @@
   }
 
 }
+
+
+////////////
+
+
+@media only screen and (min-width: 992px) {
+  .information-wrap {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+  }
+
+  .bl_fullCategories__item.active {
+    position: relative;
+    background-color: #7bb401;
+  }
+
+  .bl_fullCategories__item.active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    display: block;
+    background: 0 0;
+    background: #392b24;
+    bottom: 0;
+    left: 0;
+    transition: all .2s ease-out;
+    z-index: 33;
+  }
+
+  .categoriesWrap {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .bl_fullCategories {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+
+
+
